@@ -1,0 +1,50 @@
+@import url("/ProyectoPHP/css/StyleP.css");
+
+body{
+    background-color: #EAEAEA;
+}
+
+#SideBar{
+    float: left;
+    width: 19%;
+    min-height:625px;
+    height:auto;
+    /*position: absolute;*/
+    top:8%;
+
+}
+.option-div:hover{
+    background-color: rgba(232, 232, 232, 0.4);
+    cursor:pointer;
+}
+
+#DashContent{ 
+    width: auto;
+    margin-right: 0;
+    padding-right: 0;
+}
+.row{
+    margin-right:0px;
+}
+
+@media (min-width: 256px) and (max-width: 576px){
+
+}/* Declaracion sm */
+
+@media (min-width: 576px) and (max-width: 768px){
+
+}/* Declaracion md*/
+
+@media (min-width: 768px) and (max-width: 992px){
+
+}/* Declaracion lg*/
+
+@media (min-width: 992px){
+
+}/* Declaracion xl*/
+
+
+
+
+
+
