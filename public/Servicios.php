@@ -1,7 +1,7 @@
 <?php
     define("Raiz",$_SERVER['DOCUMENT_ROOT']); //Se obtiene la raiz del sitio para facilitar los include
     include_once(Raiz."/ProyectoPHP/lib/page.php");
-    base::Head("Servicios","StyleServicios"); //Incluye la cabecera e importa los css
+    base::Head("Servicios","Public/StyleServicios"); //Incluye la cabecera e importa los css
     base::Header("bg-white","grey-text"); // Muestra el Header del sitio
 ?>
 <body class="mt-5">
