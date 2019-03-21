@@ -9,30 +9,56 @@
     base::Sidebar();
 ?>
     
-    <div class="pt-5 pl-5 row d-flex justify-content-center" id="DashContent">
-        <div class="col-xl-5 mr-2 mb-2 pt-4 shadow-sm bg-white card">
+    <div class="pt-3 row d-flex justify-content-center" id="DashContent">
+        <h3 class="Lato grey-text pl-5 pt-3 pb-3 w-100">Dashboard</h3>
+
+        <div class="col-xl-4 mr-3 mb-3 pt-4 shadow-sm bg-white card">
             <div class="card-title">
                 Hola
             </div>
-               <div class="card-body">
+            <div class="card-body">
                         Jelou
-                </div>
-            
+            </div>
         </div>
-        <div class="col-xl-5 pt-4 mb-2 bg-white shadow-sm">
-            <section class="box">
-                Jelou
-            </section>
+        <div class="col-xl-4 pt-4 mr-3 mb-3 bg-white shadow-sm">
+            <div class="card-title">
+                Hola
+            </div>
+            <div class="card-body">
+                        Jelou
+            </div>
         </div>
-        <div class="col-xl-5 pt-4 mr-2 mb-2 bg-white shadow-sm">
-            <section class="box">
-                Jelou
-            </section>
+        <div class="col-xl-4 pt-4  mb-3 bg-white shadow-sm">
+            <div class="card-title">
+                Hola
+            </div>
+            <div class="card-body">
+                        Jelou
+            </div>
         </div>
-        <div class="col-xl-5 pt-4 mb-2 bg-white shadow-sm">
-            <section class="box">
-                Jelou
-            </section>
+        <div class="col-xl-4 pt-4 mr-3 mb-3 bg-white shadow-sm">
+            <div class="card-title">
+                Hola
+            </div>
+            <div class="card-body">
+                        Jelou
+            </div>
+        </div>
+        <div class="col-xl-4 pt-4 mr-3 mb-3 bg-white shadow-sm">
+            <div class="card-title">
+                Hola
+            </div>
+            <div class="card-body">
+                        Jelou
+            </div>
+        </div>
+        <div class="col-xl-4 pt-4 mb-3 bg-white shadow-sm">
+            <div class="card-title">
+                Hola
+            </div>
+            <div class="card-body">
+                        Jelou
+            </div>
         </div>
     </div>
 

@@ -19,7 +19,9 @@
     margin-top: 0;
     margin-bottom: 0; 
 }
-
+.col-xl-4{
+    max-width: 30% !important;
+}
 .bg-white2{
     background-color:#E8ECF8; 
 }
