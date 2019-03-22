@@ -33,12 +33,6 @@
             <p class="Lato pt-2 grey-text wowo fadeInUp clear-both">¡Allabu Ahbar!</p>
         </div>
         <div class="mb-3">
-            <img class="img-fluid float-left mr-4 wow fadeInUp" width="95" heigth="94" src="/ProyectoPHP/img/Nosotros/Nicco.jpg" alt="dennisee">
-            <h5 class="Lato pt-5 wow fadeInUp">Nicolas Ernesto Alas Marroquin, ??</h5>
-            <p class="Lato pt-0 blue-text wow fadeInUp">RedSkull@gmail.com | Teléfono: 78829289</p>
-            <p class="Lato pt-2 grey-text wowo fadeInUp clear-both">Nicco es parte del grupo</p>
-        </div>
-        <div class="mb-3">
             <img class="img-fluid float-left mr-4 wow fadeInUp" width="95" heigth="94" src="/ProyectoPHP/img/Nosotros/Marco.jpg" alt="dennisee">
             <h5 class="Lato pt-5 wow fadeInUp">Marco Hernandez Hernandez, Web Developer</h5>
             <p class="Lato pt-0 blue-text wow fadeInUp">michael_hernandez@gmail.com | Teléfono: 78829289</p>
@@ -65,7 +59,7 @@
    
     <!-- Fin del contenido del sitio WEB -->
 <?php
-   base::Footer(); // Incluye el Footer ademas de los JS
+   base::Footer(""); // Incluye el Footer ademas de los JS
 ?>
 </body>
 </html>

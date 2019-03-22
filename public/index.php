@@ -38,7 +38,7 @@
         
     <!-- Fin del contenido del sitio WEB -->
 <?php
-   base::Footer(); // Incluye el Footer ademas de los JS
+   base::Footer(""); // Incluye el Footer ademas de los JS
 ?>
 </body>
 </html>

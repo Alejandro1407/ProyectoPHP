@@ -7,21 +7,28 @@ body{
 #SideBar{
     float: left;
     width: 19%;
-    min-height:625px;
+    min-height:725px;
     height:auto;
+    position: fixed;
+    top:0;
     /*position: absolute;*/
-    top:8%;
-
 }
-.option-div:hover{
+.option-menu:hover{
     background-color: rgba(232, 232, 232, 0.4);
     cursor:pointer;
 }
+.option:hover{
+    background-color: rgba(232, 232, 232, 0.5);
+    cursor: pointer;
+}
 
-#DashContent{ 
+.Content{ 
     width: auto;
     margin-right: 0;
     padding-right: 0;
+}
+#Body{
+    margin-left: 20%;
 }
 .row{
     margin-right:0px;
