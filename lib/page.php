@@ -61,41 +61,57 @@
             print("  <!-- Side Bar-->
             <div id=\"SideBar\" class=\"bg-white shadow-md  pt-4 pl-4 pr-3 fixed-left\">
                 <img class=\"rounded-circle img-fluid float-left mr-2\" width=\"85\" heigth=\"65\" src=\"/ProyectoPHP/img/Restricted/Default.png\" >
-                <p class=\"grey-text font-weight-bold pl-4 pb-0 mb-0 pt-3 text-center\">Alejandro Alejo</p>
-                <p class=\"grey-text pl-4 pt-0 mt-0 font-small text-center\">Administrador</p>
+                <p class=\"grey-text font-weight-bold pl-4 pb-0 mb-0 pt-3 text-center txt\">Alejandro Alejo</p>
+                <p class=\"grey-text pl-4 pt-0 mt-0 font-small text-center txt\">Administrador</p>
         
-                <p class=\"grey-text clear-both pl-3 pt-3 mb-1 Lato\">Main</p>
-                <div class=\"pl-3 pt-2 option-menu\">
+                <p class=\"grey-text clear-both pl-2 pt-3 mb-1 Lato txt-head\">Main</p>
+
+                <div class=\"pl-2 pt-2 option-menu\" id=\"Dash\">
                     <img src=\"/ProyectoPHP/img/Restricted/DashBoard.png\" class=\"img-fluid mr-3 float-left\">
-                    <p class=\"grey-text Lato pt-1 pb-3 mb-1\">DashBoard</p>
+                    <p class=\"grey-text Lato pt-1 pb-3 mb-1 txt\">DashBoard</p>
                 </div>
         
-                <div class=\"pl-3 pt-2 option-menu\">
+                <div class=\"pl-2 pt-2 option-menu\" id=\"Mail\">
                     <img src=\"/ProyectoPHP/img/Restricted/Mail.png\" class=\"img-fluid mr-3 float-left\" >
-                    <p class=\"grey-text Lato pt-1 pb-3 mb-1\">Mail</p>
+                    <p class=\"grey-text Lato pt-1 pb-3 mb-1 txt\">Mail</p>
                 </div>
         
-                <div class=\"pl-3 pt-2 option-menu\">
+                <div class=\"pl-2 pt-2 option-menu\" id=\"Consult\">
                     <img src=\"/ProyectoPHP/img/Restricted/Consulta.png\" class=\"img-fluid mr-3 float-left\">
-                    <p class=\"grey-text Lato pt-1 pb-3 mb-1\">Consult</p>
+                    <p class=\"grey-text Lato pt-1 pb-3 mb-1 txt\">Consult</p>
                 </div>
         
-                <div class=\"pl-3 pt-2 option-menu\">
+                <div class=\"pl-2 pt-2 option-menu\" id=\"History\">
                     <img src=\"/ProyectoPHP/img/Restricted/Historial.png\" class=\"img-fluid mr-3 float-left\">
-                    <p class=\"grey-text Lato pt-1 pb-3 mb-1\">History</p>
+                    <p class=\"grey-text Lato pt-1 pb-3 mb-1 txt\">History</p>
                 </div>
-                <p class=\"grey-text clear-both pl-3 pt-1 mb-1 Lato\">Account</p>
+
+                <p class=\"grey-text clear-both pl-2 pt-1 mb-1 Lato txt-head2\">Account</p>
                 
-                <div class=\"pl-3 pt-2 option-menu\">
+                <div class=\"pl-2 pt-2 option-menu\" id=\"Account\">
                     <img src=\"/ProyectoPHP/img/Restricted/Cuenta.png\" class=\"img-fluid mr-3 float-left\">
-                    <p class=\"grey-text Lato pt-1 pb-3\">Profile</p>
+                    <p class=\"grey-text Lato pt-1 pb-3 txt\">Profile</p>
                 </div>
         
             </div>
             ");
         }
 
-        public static function Footer($Script){
+        public static function Scripts($Script){
+            print("
+                <!-- Importacion de los Scripts -->
+                
+                <script src=\"/ProyectoPHP/js/jquery.js\"></script>
+                <script src=\"/ProyectoPHP/js/popper.js\"></script>
+                <script src=\"/ProyectoPHP/js/bootstrap.js\"></script>
+                <script src=\"/ProyectoPHP/js/mdb.js\"></script>
+                <script src=\"/ProyectoPHP/js/Scripts/Scriptindex.js\"></script>
+                <script src=\"/ProyectoPHP/js/Scripts/$Script.js\"></script>
+            ");
+
+        }
+
+        public static function Footer(){
 
             print("
                 <!-- Footer -->
@@ -104,16 +120,7 @@
                         <a href=\"\">Banco Generico.com</a>
                     </div>
                 </footer>
-
-                    <!-- Importacion de los Scripts -->
-
-                <script src=\"/ProyectoPHP/js/jquery.js\"></script>
-                <script src=\"/ProyectoPHP/js/popper.js\"></script>
-                <script src=\"/ProyectoPHP/js/bootstrap.js\"></script>
-                <script src=\"/ProyectoPHP/js/mdb.js\"></script>
-                <script src=\"/ProyectoPHP/js/Scripts/Scriptindex.js\"></script>
-                <script src=\"/ProyectoPHP/js/Scripts/$Script.js\"></script>
-            ");
+                ");
         }
 
     }//Fin de la clase

@@ -19,9 +19,9 @@
     margin-top: 0;
     margin-bottom: 0; 
 }
-.col-xl-4{
-    max-width: 30% !important;
-}
+
+
+
 .bg-white2{
     background-color:#E8ECF8; 
 }
@@ -72,16 +72,20 @@
     
 }/* Declaracion md*/
 
-@media (min-width: 768px) and (max-width: 992px){
+@media (min-width: 768px) {
 .hr-vertical{
         height: 25px;
     }
-}/* Declaracion lg*/
+    .col-xl-4{
+        max-width: 30% !important;
+    }
+}/* Declaracion lg
 
 @media (min-width: 992px){
 .hr-vertical{
         height: 25px;
     }
+
 }/* Declaracion xl*/
 
 

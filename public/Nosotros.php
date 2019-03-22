@@ -13,9 +13,17 @@
 
     <div class="bg-white panel pt-5">
         <h2 class="grey-text text-align-center font-weight-bold wow fadeInUp pb-3">Banco Generico</h2>
-        <p class="grey-text wow fadeInUp">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis vel incidunt sed, ea deserunt harum sint inventore, ipsam accusamus quaerat et autem dolorum adipisci. Vel nam quidem dolore vitae sit.
-         <br> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, dolor. Optio id debitis maiores accusamus provident ipsum dolorem repellat ea quia, obcaecati ipsa, quos, libero eos. Excepturi neque delectus quae?
+        <h4 class="grey-text Lato">Mision</h4>
+        <p class="grey-text wow fadeInUp">
+            Somos el principal aliado de nuestros clientes en la satisfacción de sus necesidades financieras,
+            con productos innovadores y un elevado nivel de eficiencia y servicio, a través de un equipo comprometido, motivado y de alto desempeño. Generamos valor para nuestros clientes, colaboradores, accionistas y la comunidad.
         </p>
+        <h4 class="grey-text Lato">Vision</h4>
+        <p class="grey-text wow fadeInUp">
+            Ser una organización comprometida con la excelencia, que satisface las necesidades 
+            financieras de los clientes, con soluciones integrales e innovadoras.
+        </p>
+        <br><br>
     </div>
     
     <div class="bg-white2 panel">
@@ -48,18 +56,15 @@
             <img class="img-fluid float-left mr-4 wow fadeInUp" width="95" heigth="94" src="/ProyectoPHP/img/Nosotros/Alejandro.jpeg" alt="dennisee">
             <h5 class="Lato pt-3 wow fadeInUp">Victor Alejandro Alejo Gálvez, CEO</h5>
             <p class="Lato pt-0 blue-text wow fadeInUp">elmejordobleaa@gmail.com | Teléfono: 78827529</p>
-            <p class="Lato pt-2 grey-text wowo fadeInUp clear-both">Lord y señor de este pinshe grupo de DSS :v</p>
+            <p class="Lato pt-2 grey-text wowo fadeInUp clear-both">Lord y señor de este grupo de DSS :v</p>
         </div>
         <br><br>
-    </div>
-
-    <div class="panel">
-
     </div>
    
     <!-- Fin del contenido del sitio WEB -->
 <?php
-   base::Footer(""); // Incluye el Footer ademas de los JS
+   base::Scripts("");
+   base::Footer(); // Incluye el Footer ademas de los JS
 ?>
 </body>
 </html>

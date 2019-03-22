@@ -28,9 +28,7 @@
         padding-right: 5%;
         min-height: 325px;
     }
-    #theDiv{
-        height:;
-    }
+  
 }/* Declaracion sm */
 
 @media (min-width: 576px) and (max-width: 768px){

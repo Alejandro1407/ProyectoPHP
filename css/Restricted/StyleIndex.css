@@ -8,7 +8,7 @@ body{
     float: left;
     width: 19%;
     min-height:725px;
-    height:auto;
+    height:100%;
     position: fixed;
     top:0;
     /*position: absolute;*/
@@ -17,10 +17,11 @@ body{
     background-color: rgba(232, 232, 232, 0.4);
     cursor:pointer;
 }
+/*
 .option:hover{
     background-color: rgba(232, 232, 232, 0.5);
     cursor: pointer;
-}
+}*/
 
 .Content{ 
     width: auto;
@@ -28,29 +29,39 @@ body{
     padding-right: 0;
 }
 #Body{
-    margin-left: 20%;
+    margin-left: 22%;
+    padding: 0;
 }
 .row{
     margin-right:0px;
 }
 
-@media (min-width: 256px) and (max-width: 576px){
-
+@media (min-width: 256px) and (max-width: 768px){
+    .txt{
+        display: none;
+    }
+    .txt-head{
+        padding-left: 12% !important;
+    }
+    .txt-head2{
+        padding-left: 0% !important;
+    }
+    #Body{
+        margin-left: 24%;
+        margin-right: 2%;
+    }
+    .option-menu{
+        width: 55px !important;
+        height: 55px !important;
+        padding-right: 10px;
+        
+    }
+  
 }/* Declaracion sm */
 
-@media (min-width: 576px) and (max-width: 768px){
-
-}/* Declaracion md*/
-
-@media (min-width: 768px) and (max-width: 992px){
+@media (min-width: 768px){
 
 }/* Declaracion lg*/
-
-@media (min-width: 992px){
-
-}/* Declaracion xl*/
-
-
 
 
 

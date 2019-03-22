@@ -10,6 +10,7 @@
     <div id="theDiv">
         <h1 class="white-text text-align-center font-weight-bold" id="Titulo">Contacto</h1>
     </div>
+    
     <!---->
     <div class="panel pt-3 row">
 
@@ -46,13 +47,15 @@
         <div class="grey-text col-xl-3 col-lg-3 col-sm-12 col-xs-12 pt-2">
             <h5>Llámanos</h5>
             <h6 class="pt-4">Tel: 2555-5555<br>1-800-000-0000<br>Fax: 914-123-456</h6>
+            <br><br>
         </div>
         
     </div>
    
     <!-- Fin del contenido del sitio WEB -->
 <?php
-   base::Footer(""); // Incluye el Footer ademas de los JS
+   base::Scripts("");
+   base::Footer(); // Incluye el Footer ademas de los JS
 ?>
 </body>
 </html>

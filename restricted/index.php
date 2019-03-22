@@ -14,7 +14,7 @@
     </article>
 
 <?php
-   base::Footer("Restricted/ScriptRestricted"); // Incluye el Footer ademas de los JS
+   base::Scripts("Restricted/ScriptRestricted"); // Incluye los JS
 ?>
 </body>
 </html>
