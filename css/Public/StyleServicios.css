@@ -8,7 +8,7 @@ body{
     width: 100%;
 }
 #theDiv{
-    background-image: url("/ProyectoPHP/img/Servicios/Servicios.jpg");
+    background-image: url("/ProyectoPHP/img/Public/Servicios/Servicios.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     background-attachment: fixed;

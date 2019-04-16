@@ -1,11 +1,10 @@
 $(document).ready(function(){
-    $('#Body').load("/ProyectoPHP/restricted/history.php");
+    $('#Body').load("/ProyectoPHP/restricted/dashboard.php");
     
     $('.option-menu').on('click',function(e){
         MostrarPage($(this).attr('id'))
     });
     
-    //Solo esa linea
 });
 
 function MostrarPage(id){
@@ -16,7 +15,11 @@ function MostrarPage(id){
         case 'Mail':
             $('#Body').load("/ProyectoPHP/restricted/mail.php");
             break;
+        case 'AddUser':
+            $('#Body').load("/ProyectoPHP/restricted/adduser.php");
+            break;
         case 'Consult':
+            $('#Body').load("/ProyectoPHP/restricted/consult.php");
             break;
         case 'History':
             $('#Body').load("/ProyectoPHP/restricted/history.php");

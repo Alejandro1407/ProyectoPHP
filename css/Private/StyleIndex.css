@@ -1,0 +1,195 @@
+@import url("/ProyectoPHP/css/StyleP.css");
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    margin-left: 17%;
+    width:83%;
+    background: #3551CC;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    height: 5vh;
+    font-weight: 600;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+body{
+    background-color: rgba(234, 234, 234, 1);
+}
+
+.contenedor-padre{
+    width: 100%;
+    display: grid;
+    column-gap: 1.5%;
+    grid-template-columns: 17% 80%;
+}
+
+header > p{
+    line-height: 5vh ;
+}
+
+.panel{
+    background: #3B507A;
+    height: 125vh;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.perfil{
+    height: 15vh;
+    box-sizing: border-box;
+    padding:25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.perfil > li{
+    display: inline-block;
+}
+
+.perfil > li:nth-child(1){
+    text-align: center;
+    font-size: 65px;
+    color: white;
+}
+
+.perfil > li:nth-child(2){
+    width: 65%;
+    text-align: center;
+    color: white;
+    position: absolute;
+    margin-top: 5%;
+}
+
+.perfil > li:nth-child(2) > p:nth-child(1){
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.perfil > li:nth-child(2) > p:nth-child(2){
+    font-size: 0.8em;
+}
+
+.con_options{
+    padding: 25px;
+}
+
+.options{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.options:hover{
+    background: #3F7091;
+    transition-property: background-color;
+    transition-delay: 0s;
+    transition-duration: .3s;
+}
+
+.options::before{
+    content: "";
+    display: block;
+    width: 0;
+    margin-left: 25px;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    margin-top: -10px;
+}
+
+.options:hover:before{
+    width: 84.5%;
+    transition: ease-in-out .3s all;
+}
+
+.options > div.iconos, .options > div.opt{
+    display: inline-block;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.options > div.iconos{
+    font-size: 2em;
+}
+
+.options > div.opt{
+    position: absolute;
+    margin-left: 15px;
+    line-height: 2.5em;
+}
+
+.foot{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    color: white;
+}
+
+.foot > hr{
+    width: 60%;
+    height: 1px;
+    border: none;
+    background: #fff;
+    margin: auto;
+}
+
+.foot > p{
+    text-align: center;
+    line-height: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: ease-in-out .5s all;
+}
+
+.contenedor{
+    margin-top: 1%;
+    display: grid;
+    column-gap: 2%;
+    row-gap: 2%;
+    grid-template-columns: 32% 32% 32%;
+    grid-template-rows: 30% 30%;
+}
+
+.contenedor > .cuadro{
+    color: #3F7091;
+    background-color:#fff;
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    cursor: pointer;
+}
+
+.contenedor > .cuadro > .cont-cuadro{
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.contenedor > .cuadro > .cont-cuadro > p.titulo{
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+}
+
+.contenedor > .cuadro > .cont-cuadro > span{
+    font-size: 3.5em;
+    color: #3B507A;
+}
+
+.contenedor > .cuadro:hover{
+    background: rgba(245, 245, 245, 1);
+    transition: ease-in-out .3s all;
+}
+
+

@@ -29,31 +29,31 @@
     <div class="bg-white2 panel">
         <h2 class="grey-text text-align-center font-weight-bold pt-5 pb-5 wow fadeInUp">Nuestro Equipo</h2>
         <div class="mb-4">
-            <img class="img-fluid float-left mr-4 wow fadeInUp" width="95" heigth="94" src="/ProyectoPHP/img/Nosotros/dennis.webp" alt="dennisee">
+            <img class="img-fluid float-left mr-4 wow fadeInUp" width="95" heigth="94" src="/ProyectoPHP/img/Public/Nosotros/dennis.webp" alt="dennisee">
             <h5 class="Lato pt-4 wow fadeInUp">Dennise Enrique Cruz Inestrosa, Ing. Civil</h5>
             <p class="Lato pt-0 blue-text wow fadeInUp">Dennise@gmail.com | Teléfono: 78829289</p>
             <p class="Lato pt-2 grey-text wowo fadeInUp clear-both">Dennise es nuestro albañil de bases de datos</p>
         </div>
         <div class="mb-3">
-            <img class="img-fluid float-left mr-4 wow fadeInUp" width="95" heigth="94" src="/ProyectoPHP/img/Nosotros/Matthew.jpg" alt="dennisee">
+            <img class="img-fluid float-left mr-4 wow fadeInUp" width="95" heigth="94" src="/ProyectoPHP/img/Public/Nosotros/Matthew.jpg" alt="dennisee">
             <h5 class="Lato pt-4 wow fadeInUp">Matthew Emilio Gai Ramos, Musul-Man</h5>
             <p class="Lato pt-0 blue-text wow fadeInUp">GaiRamos@gmail.com | Teléfono: 78829289</p>
             <p class="Lato pt-2 grey-text wowo fadeInUp clear-both">¡Allabu Ahbar!</p>
         </div>
         <div class="mb-3">
-            <img class="img-fluid float-left mr-4 wow fadeInUp" width="95" heigth="94" src="/ProyectoPHP/img/Nosotros/Marco.jpg" alt="dennisee">
+            <img class="img-fluid float-left mr-4 wow fadeInUp" width="95" heigth="94" src="/ProyectoPHP/img/Public/Nosotros/Marco.jpg" alt="dennisee">
             <h5 class="Lato pt-5 wow fadeInUp">Marco Hernandez Hernandez, Web Developer</h5>
             <p class="Lato pt-0 blue-text wow fadeInUp">michael_hernandez@gmail.com | Teléfono: 78829289</p>
             <p class="Lato pt-2 grey-text wowo fadeInUp clear-both">404 Not Found</p>
         </div>
         <div class="mb-3">
-            <img class="img-fluid float-left mr-4 wow fadeInUp" width="95" heigth="94" src="/ProyectoPHP/img/Nosotros/Pablo.jpeg" alt="dennisee">
+            <img class="img-fluid float-left mr-4 wow fadeInUp" width="95" heigth="94" src="/ProyectoPHP/img/Public/Nosotros/Pablo.jpeg" alt="dennisee">
             <h5 class="Lato pt-5 wow fadeInUp">Javier Ernesto Perez Pablo, Fisico</h5>
             <p class="Lato pt-0 blue-text wow fadeInUp">hawinkg@gmail.com | Teléfono: 78829289</p>
             <p class="Lato pt-2 grey-text wowo fadeInUp clear-both">Sus incapacidades no son un impedimento para progresar</p>
         </div>
         <div class="mb-3">
-            <img class="img-fluid float-left mr-4 wow fadeInUp" width="95" heigth="94" src="/ProyectoPHP/img/Nosotros/Alejandro.jpeg" alt="dennisee">
+            <img class="img-fluid float-left mr-4 wow fadeInUp" width="95" heigth="94" src="/ProyectoPHP/img/Public/Nosotros/Alejandro.jpeg" alt="dennisee">
             <h5 class="Lato pt-3 wow fadeInUp">Victor Alejandro Alejo Gálvez, CEO</h5>
             <p class="Lato pt-0 blue-text wow fadeInUp">elmejordobleaa@gmail.com | Teléfono: 78827529</p>
             <p class="Lato pt-2 grey-text wowo fadeInUp clear-both">Lord y señor de este grupo de DSS :v</p>

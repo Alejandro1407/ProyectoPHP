@@ -3,7 +3,7 @@
 
 
 body{
-    background-image: url("/ProyectoPHP/img/fondo.jpg");
+    background-image: url("/ProyectoPHP/img/Public/fondo.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     background-attachment: fixed;

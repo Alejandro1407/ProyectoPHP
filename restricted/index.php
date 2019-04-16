@@ -6,7 +6,7 @@
 ?>
 <body class="" >
 <?php 
-    base::Sidebar();
+    base::Sidebar("Alejandro");
 ?>
 
     <article id="Body">

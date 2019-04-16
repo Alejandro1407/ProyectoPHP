@@ -47,7 +47,10 @@
                                 </li>
                             </ul>          
                         </div>
-                        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+                        <div class=\"navbar-nav nav-flex-icons ml-auto\" id=\"Sesion\">
+                            <a class=\"grey-text\" data-toggle=\"modal\" data-target=\"#modalLoginForm\"><span class=\"mr-3\"> <i class=\"fas fa-sign-in-alt\"></i>Entrar</span></a>
+                        </div>
+                            <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                             <span class=\"navbar-toggler-icon\"></span>
                         </button>
                    </div>
@@ -55,11 +58,11 @@
             </header>
             ");
         }//Fin Header
-
+    /*
         public static function Sidebar(){
 
             print("  <!-- Side Bar-->
-            <div id=\"SideBar\" class=\"bg-white shadow-md  pt-4 pl-4 pr-3 fixed-left\">
+            <div id=\"SideBar\" class=\"bg-white shadow-md justify-content-center pt-4 pl-4 pr-3 fixed-left\">
                 <img class=\"rounded-circle img-fluid float-left mr-2\" width=\"85\" heigth=\"65\" src=\"/ProyectoPHP/img/Restricted/Default.png\" >
                 <p class=\"grey-text font-weight-bold pl-4 pb-0 mb-0 pt-3 text-center txt\">Alejandro Alejo</p>
                 <p class=\"grey-text pl-4 pt-0 mt-0 font-small text-center txt\">Administrador</p>
@@ -70,7 +73,12 @@
                     <img src=\"/ProyectoPHP/img/Restricted/DashBoard.png\" class=\"img-fluid mr-3 float-left\">
                     <p class=\"grey-text Lato pt-1 pb-3 mb-1 txt\">DashBoard</p>
                 </div>
-        
+
+                <div class=\"pl-2 pt-2 option-menu\" id=\"AddUser\">
+                    <img src=\"/ProyectoPHP/img/Restricted/AddUser.png\" width=\"35\" height=\"35\" class=\"img-fluid mr-3 float-left\">
+                    <p class=\"grey-text Lato pt-1 pb-3 mb-1 txt\">Agregar Usuario</p>
+                </div>
+
                 <div class=\"pl-2 pt-2 option-menu\" id=\"Mail\">
                     <img src=\"/ProyectoPHP/img/Restricted/Mail.png\" class=\"img-fluid mr-3 float-left\" >
                     <p class=\"grey-text Lato pt-1 pb-3 mb-1 txt\">Mail</p>
@@ -94,6 +102,104 @@
                 </div>
         
             </div>
+            ");
+        }*/
+public static function SideBar($Nombre){
+            print("
+            <div class=\"contenedor-padre\">
+            <div class=\"panel\">
+                <div class=\"perfil\">
+                    <li><i class=\"fas fa-user-circle\"></i></li>
+                    <li><p>$Nombre</p><p>Administrador</p></li>
+                </div>
+                <div class=\"con_options\">
+                    <div class=\"options\"> 
+                        <div class=\"iconos\">
+                            <i class=\"fas fa-tools\"></i>
+                        </div> 
+                        <div class=\"opt\">
+                            <p>Administrar</p>
+                        </div> 
+                    </div>
+                    <div class=\"options\"> 
+                        <div class=\"iconos\">
+                            <i class=\"fas fa-envelope\"></i>
+                        </div> 
+                        <div class=\"opt\">
+                            <p>Correo</p>
+                        </div> 
+                    </div>
+                    <div class=\"options\"> 
+                        <div class=\"iconos\">
+                            <i class=\"fas fa-question-circle\"></i> 
+                        </div> 
+                        <div class=\"opt\">
+                            <p>Consultas</p>
+                        </div> 
+                    </div>
+                    <div class=\"options\"> 
+                        <div class=\"iconos\">
+                            <i class=\"fas fa-history\"></i>
+                        </div> 
+                        <div class=\"opt\">
+                            <p>Historial</p>
+                        </div> 
+                    </div>
+                    <div class=\"options\"> 
+                        <div class=\"iconos\">
+                            <i class=\"fas fa-user-cog\"></i>
+                        </div> 
+                        <div class=\"opt\">
+                            <p>Perfil</p>
+                        </div> 
+                    </div>
+                </div>
+                <div class=\"foot\">
+                        <hr>
+                        <p>BBVA</p>
+                </div>
+            </div>
+            ");
+
+
+    }
+
+ public static function sidebarCliente($nombre){
+            print("
+            <div class=\"w3-bar w3-top w3-black w3-large\" style=\"z-index:4\">
+                <button class=\"w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey\" onclick=\"w3_open();\"><i class=\"fa fa-bars\"></i> 聽Menu</button>
+                <span class=\"w3-bar-item w3-right\">BBVA</span>
+            </div>
+
+                <!-- Menu lateral -->
+                <nav class=\"w3-sidebar w3-collapse w3-white w3-animate-left\" style=\"z-index:3;width:300px;\" id=\"mySidebar\"><br>
+                    <div class=\"w3-container w3-row\">
+                        <div class=\"w3-col s4\">
+                            <img src=\"/ProyectoPHP/img/Private/avatar2.png\" class=\"w3-circle w3-margin-right\" style=\"width:46px\">
+                        </div>
+                        <div class=\"w3-col s8 w3-bar\">
+                            <span>Bienvenido, <strong>$nombre</strong></span><bro>
+                            <a href=\"#\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-envelope\"></i></a>
+                            <a href=\"#\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-user\"></i></a>
+                            <a href=\"#\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-cog\"></i></a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class=\"w3-container\">
+                        <h5>Dashboard</h5>
+                    </div>
+                    <div class=\"w3-bar-block\">
+                        <a href=\"#\" class=\"w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black\" onclick=\"w3_close()\" title=\"cerrar menu\"><i class=\"fa fa-remove fa-fw\"></i>聽 Cerrar menu</a>
+                        <a href=\"#\" class=\"w3-bar-item w3-button w3-padding w3-blue tablink\" onclick=\"openCity(event, 'Saldo')\"><i class=\"fa fa-users fa-fw\"></i>聽 Consulta de saldo</a>
+                        <a href=\"#\" class=\"w3-bar-item w3-button w3-padding tablink\" onclick=\"openCity(event, 'Retiros')\"><i class=\"fa fa-eye fa-fw\"></i>聽 Retiros</a>
+                        <a href=\"#\" class=\"w3-bar-item w3-button w3-padding tablink\" onclick=\"openCity(event, 'Deposito')\"><i class=\"fa fa-users fa-fw\"></i>聽 Dep贸sitos,</a>
+                        <a href=\"#\" class=\"w3-bar-item w3-button w3-padding tablink\"  onclick=\"openCity(event, 'OperacionesRealizadas')\"><i class=\"fa fa-history fa-fw\"></i>聽 Operaciones realizadas</a>
+                        <a href=\"#\" class=\"w3-bar-item w3-button w3-padding tablink\"><i class=\"fa fa-cog fa-fw\"></i>聽 Perfil</a><br><br>
+                    </div>
+                </nav>
+
+                <!-- Sidebar responsive -->
+                <div class=\"w3-overlay w3-hide-large w3-animate-opacity\" onclick=\"w3_close()\" style=\"cursor:pointer\" title=\"cerrar side menu\" id=\"myOverlay\"></div>
             ");
         }
 

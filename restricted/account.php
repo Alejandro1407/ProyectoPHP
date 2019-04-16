@@ -1,4 +1,4 @@
-<div class="bg-white row mr-0 mt-3 pl-2 mr-xl-5 ml-xl-3 mt-xl-5 shadow-lg Content" id="AccountDiv">
+<div class="bg-white row mr-0 mt-3 pl-2 mr-xl-5 ml-xl-3 mt-xl-5 shadow-lg Content">
 
     <h2 class="grey-text pl-3 Lato pt-4 w-100">Cuenta</h2>
 
@@ -34,6 +34,7 @@
             <label for="PNombre"></label>
         </div>
         <button class="btn grey-text">Actualizar Datos</button>
+        <button class="btn btn-danger">Cerrar Sesion</button>
     </div>
 
 </div>
