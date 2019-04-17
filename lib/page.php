@@ -23,7 +23,7 @@
             ");
         }//Fin de Head
         
-        public static function Header($BackGround,$Text){
+        /*public static function Header($BackGround,$Text){
             print("
             <header>
                 <nav class=\"Lato navbar p-1 shadow-none navbar-expand-md $BackGround navbar-light bg-white scrolling-navbar fixed-top\" id=\"TheNavBar\">
@@ -57,7 +57,7 @@
                 </nav>
             </header>
             ");
-        }//Fin Header
+        }*///Fin Header
     /*
         public static function Sidebar(){
 
@@ -104,103 +104,121 @@
             </div>
             ");
         }*/
+
+public static function Header(){
+    echo <<<EO
+    <header>
+        <p>Banco - BBVA</p>
+    </header>
+EO;
+}
+
+public static function Footer(){
+    print ("
+    <footer>
+        <p>Sistema Bancario | Universidad Don Bosco | 2019 </p>
+    </footer>
+    ");
+}
+
 public static function SideBar($Nombre){
-            print("
-            <div class=\"contenedor-padre\">
-            <div class=\"panel\">
-                <div class=\"perfil\">
-                    <li><i class=\"fas fa-user-circle\"></i></li>
-                    <li><p>$Nombre</p><p>Administrador</p></li>
-                </div>
-                <div class=\"con_options\">
-                    <div class=\"options\"> 
-                        <div class=\"iconos\">
-                            <i class=\"fas fa-tools\"></i>
-                        </div> 
-                        <div class=\"opt\">
-                            <p>Administrar</p>
-                        </div> 
-                    </div>
-                    <div class=\"options\"> 
-                        <div class=\"iconos\">
-                            <i class=\"fas fa-envelope\"></i>
-                        </div> 
-                        <div class=\"opt\">
-                            <p>Correo</p>
-                        </div> 
-                    </div>
-                    <div class=\"options\"> 
-                        <div class=\"iconos\">
-                            <i class=\"fas fa-question-circle\"></i> 
-                        </div> 
-                        <div class=\"opt\">
-                            <p>Consultas</p>
-                        </div> 
-                    </div>
-                    <div class=\"options\"> 
-                        <div class=\"iconos\">
-                            <i class=\"fas fa-history\"></i>
-                        </div> 
-                        <div class=\"opt\">
-                            <p>Historial</p>
-                        </div> 
-                    </div>
-                    <div class=\"options\"> 
-                        <div class=\"iconos\">
-                            <i class=\"fas fa-user-cog\"></i>
-                        </div> 
-                        <div class=\"opt\">
-                            <p>Perfil</p>
-                        </div> 
-                    </div>
-                </div>
-                <div class=\"foot\">
-                        <hr>
-                        <p>BBVA</p>
-                </div>
+    print("
+    <div class=\"contenedor-padre\">
+    <div class=\"panel\">
+        <div class=\"perfil\">
+            <li><i class=\"fas fa-user-circle\"></i></li>
+            <li><p>$Nombre</p><p>Administrador</p></li>
+        </div>
+        <div class=\"con_options\">
+            <div class=\"options\"> 
+                <div class=\"iconos\">
+                    <i class=\"fas fa-tools\"></i>
+                </div> 
+                <div class=\"opt\">
+                    <p>Administrar</p>
+                </div> 
             </div>
-            ");
-
-
+            <div class=\"options\"> 
+                <div class=\"iconos\">
+                    <i class=\"fas fa-envelope\"></i>
+                </div> 
+                <div class=\"opt\">
+                    <p>Correo</p>
+                </div> 
+            </div>
+            <div class=\"options\"> 
+                <div class=\"iconos\">
+                    <i class=\"fas fa-question-circle\"></i> 
+                </div> 
+                <div class=\"opt\">
+                    <p>Consultas</p>
+                </div> 
+            </div>
+            <div class=\"options\"> 
+                <div class=\"iconos\">
+                    <i class=\"fas fa-history\"></i>
+                </div> 
+                <div class=\"opt\">
+                    <p>Historial</p>
+                </div> 
+            </div>
+            <div class=\"options\"> 
+                <div class=\"iconos\">
+                    <i class=\"fas fa-user-cog\"></i>
+                </div> 
+                <div class=\"opt\">
+                    <p>Perfil</p>
+                </div> 
+            </div>
+        </div>
+        <div class=\"foot\">
+                <hr>
+                <p>BBVA</p>
+        </div>
+    </div>
+    ");
     }
 
- public static function sidebarCliente($nombre){
-            print("
-            <div class=\"w3-bar w3-top w3-black w3-large\" style=\"z-index:4\">
-                <button class=\"w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey\" onclick=\"w3_open();\"><i class=\"fa fa-bars\"></i> 聽Menu</button>
-                <span class=\"w3-bar-item w3-right\">BBVA</span>
+ public static function sidebarCliente($Nombre){
+    print("
+    <div class=\"contenedor-padre\">
+    <div class=\"panel\">
+        <div class=\"perfil\">
+            <li><i class=\"fas fa-user-circle\"></i></li>
+            <li><p>$Nombre</p><p>Cliente</p></li>
+        </div>
+        <div class=\"con_options\">
+            <div class=\"options\"> 
+                <div class=\"iconos\">
+                <i class=\"fas fa-coins\"></i>
+                </div> 
+                <div class=\"opt\">
+                    <p>Operaciones</p>
+                </div> 
             </div>
-
-                <!-- Menu lateral -->
-                <nav class=\"w3-sidebar w3-collapse w3-white w3-animate-left\" style=\"z-index:3;width:300px;\" id=\"mySidebar\"><br>
-                    <div class=\"w3-container w3-row\">
-                        <div class=\"w3-col s4\">
-                            <img src=\"/ProyectoPHP/img/Private/avatar2.png\" class=\"w3-circle w3-margin-right\" style=\"width:46px\">
-                        </div>
-                        <div class=\"w3-col s8 w3-bar\">
-                            <span>Bienvenido, <strong>$nombre</strong></span><bro>
-                            <a href=\"#\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-envelope\"></i></a>
-                            <a href=\"#\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-user\"></i></a>
-                            <a href=\"#\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-cog\"></i></a>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class=\"w3-container\">
-                        <h5>Dashboard</h5>
-                    </div>
-                    <div class=\"w3-bar-block\">
-                        <a href=\"#\" class=\"w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black\" onclick=\"w3_close()\" title=\"cerrar menu\"><i class=\"fa fa-remove fa-fw\"></i>聽 Cerrar menu</a>
-                        <a href=\"#\" class=\"w3-bar-item w3-button w3-padding w3-blue tablink\" onclick=\"openCity(event, 'Saldo')\"><i class=\"fa fa-users fa-fw\"></i>聽 Consulta de saldo</a>
-                        <a href=\"#\" class=\"w3-bar-item w3-button w3-padding tablink\" onclick=\"openCity(event, 'Retiros')\"><i class=\"fa fa-eye fa-fw\"></i>聽 Retiros</a>
-                        <a href=\"#\" class=\"w3-bar-item w3-button w3-padding tablink\" onclick=\"openCity(event, 'Deposito')\"><i class=\"fa fa-users fa-fw\"></i>聽 Dep贸sitos,</a>
-                        <a href=\"#\" class=\"w3-bar-item w3-button w3-padding tablink\"  onclick=\"openCity(event, 'OperacionesRealizadas')\"><i class=\"fa fa-history fa-fw\"></i>聽 Operaciones realizadas</a>
-                        <a href=\"#\" class=\"w3-bar-item w3-button w3-padding tablink\"><i class=\"fa fa-cog fa-fw\"></i>聽 Perfil</a><br><br>
-                    </div>
-                </nav>
-
-                <!-- Sidebar responsive -->
-                <div class=\"w3-overlay w3-hide-large w3-animate-opacity\" onclick=\"w3_close()\" style=\"cursor:pointer\" title=\"cerrar side menu\" id=\"myOverlay\"></div>
-            ");
+            <div class=\"options\"> 
+                <div class=\"iconos\">
+                    <i class=\"fas fa-history\"></i>
+                </div> 
+                <div class=\"opt\">
+                    <p>Historial</p>
+                </div> 
+            </div>
+            <div class=\"options\"> 
+                <div class=\"iconos\">
+                    <i class=\"fas fa-user-cog\"></i>
+                </div> 
+                <div class=\"opt\">
+                    <p>Perfil</p>
+                </div> 
+            </div>
+        </div>
+        <div class=\"foot\">
+                <hr>
+                <p>BBVA</p>
+        </div>
+    </div>
+    ");
         }
 
         public static function Scripts($Script){
@@ -217,17 +235,6 @@ public static function SideBar($Nombre){
 
         }
 
-        public static function Footer(){
-
-            print("
-                <!-- Footer -->
-                <footer class=\"page-footer font-small red\">
-                    <div class=\"footer-copyright text-center py-3\">© 2018 Copyright:
-                        <a href=\"\">Banco Generico.com</a>
-                    </div>
-                </footer>
-                ");
-        }
 
     }//Fin de la clase
 ?>

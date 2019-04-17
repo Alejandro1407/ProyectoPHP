@@ -35,8 +35,9 @@ body::-webkit-scrollbar-thumb
 .inner-addon .fas {
     position: absolute;
     padding: 10px;
+}
     /*pointer-events: none; Propiedad Mala para fas eye*/
-  }
+  
   .left-addon .fas  { left:  0px;}
   .left-addon input  { padding-left:  30px; }
   .right-addon .fas { right: 0px;}
@@ -85,25 +86,25 @@ body::-webkit-scrollbar-thumb
 }
 
 .p-15{
-    padding-left: 20% !important;
-    padding-right: 15% !important;
+    padding-left: 20%;
+    padding-right: 15%;
     min-height: 350px;
 }
 
 @media (min-width: 256px) and (max-width: 576px){
     #TheContainer{
-        max-width: 100% !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
     }
   
 }/* Declaracion sm */
 
 @media (min-width: 576px) and (max-width: 768px){
     #TheContainer{
-        max-width: 100% !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
     }
     
 }/* Declaracion md*/
@@ -113,7 +114,7 @@ body::-webkit-scrollbar-thumb
         height: 25px;
     }
     .col-xl-4{
-        max-width: 30% !important;
+        max-width: 30%;
     }
 }/* Declaracion lg
 

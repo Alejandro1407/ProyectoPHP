@@ -6,12 +6,14 @@
 ?>
 <body class="" >
 <?php 
-    base::Sidebar("Alejandro");
+    base::Sidebar("Denys");
+    base::Header();
+    base::Footer();
 ?>
 
-    <article id="Body">
+    <div class="contenedor" id="Body">
         <!-- Aqui se cargara  la pagina segun se selecciona -->
-    </article>
+    </div>
 
 <?php
    base::Scripts("Restricted/ScriptRestricted"); // Incluye los JS
