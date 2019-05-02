@@ -2,15 +2,23 @@ create database bancoDSS;
 
 use bancoDSS;
 
-create table cliente(
+create table tipoUsuario(
+	id serial primary key,
+	tipoUsuario varchar(50) not null unique
+)
+
+create table usuario(
 		id int auto_increment primary key,
         nombre varchar(75) not null,
         email varchar(50) not null unique,
-        direccion varchar(75) not null,
+        direccion varchar(75) unique not null,
+		contrasenya varchar(50) not null,
         edad int not null,
         sexo char(1) check(sexo = 'M' OR sexo = 'H'),
         DUI char(10) unique,
-        NIT char(17) unique not null
+		tipoUsuario int,
+        NIT char(17) unique not null,
+		foreign key (tipoUsuario) references 
 );
 
 create table cuenta(
