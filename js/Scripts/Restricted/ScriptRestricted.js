@@ -1,6 +1,6 @@
 $(document).ready(function(){
     console.log("Work");
-    
+
     $('#Body').load("/ProyectoPHP/restricted/dashboard.php");
     
     $('.option-menu').on('click',function(e){
@@ -29,6 +29,5 @@ function MostrarPage(id){
         case 'Account':
             $('#Body').load("/ProyectoPHP/restricted/account.php");
             break;
-
     }
 }

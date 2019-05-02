@@ -178,10 +178,11 @@ public static function SideBar($Nombre){
             </div>
             <div class=\"options\"> 
                 <div class=\"iconos\">
-                    <i class=\"fas fa-envelope\"></i>
+                    <i class=\"fas fa-piggy-bank\"></i>
                 </div> 
+                
                 <div class=\"opt\">
-                    <p>Correo</p>
+                    <p>Retiros</p>
                 </div> 
             </div>
             <div class=\"options\"> 

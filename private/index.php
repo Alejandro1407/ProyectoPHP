@@ -4,8 +4,6 @@
     include_once(Raiz."/ProyectoPHP/lib/page.php");
     base::Head("Bienvenido","Private/StyleIndex"); //Incluye la cabecera e importa los css
     base::sidebarCliente("Alejandro");
-    base::Header();
-    base::Footer();
     function __autoload($clase){
         require_once("../class/" . $clase . ".class.php");
     }

@@ -7,8 +7,6 @@
 <body class="" >
 <?php 
     base::Sidebar("Alejandro");
-    base::Header();
-    base::Footer();
 ?>
 
     <div class="contenedor" id="Body">
@@ -16,7 +14,7 @@
     </div>
 
 <?php
-   base::Scripts("Restricted/ScriptRestricted"); // Incluye los JS
+   base::Scripts("Restricted/ScriptIndex","Restricted/ScriptRestricted"); // Incluye los JS
 ?>
 </body>
 </html>
