@@ -7,12 +7,15 @@ create table tipoUsuario(
 	tipoUsuario varchar(50) not null unique
 );
 
+INSERT INTO tipoUsuario VALUES (null,"Administrador");
+INSERT INTO tipoUsuario VALUES (null,"Usuario");
+
 create table usuario(
 	id int auto_increment primary key,
 	nombre varchar(75) not null,
 	email varchar(50) not null unique,
 	direccion varchar(75) unique not null,
-	contrasenya varchar(50) not null,
+	contrasenya varchar(100) not null,
 	edad int not null,
 	sexo char(1) check(sexo = 'M' OR sexo = 'H'),
 	DUI char(10) unique,
@@ -20,6 +23,8 @@ create table usuario(
 	NIT char(17) unique not null,
 	foreign key (tipoUsuario) references tipoUsuario(id)
 );
+
+INSERT INTO usuario VALUES ( null,'Alejandro','alejandroalejo714@gmail.com','Apopa',SHA2('Password01',256),19,'M','12345678-9',1,'123456789012345');
 
 create table cuenta(
 	id int auto_increment primary key,
@@ -48,7 +53,7 @@ create table tipoTransaccion(
     tipoTransaccion varchar(30)
 );
 
-insert into tipoTransaccion values ('Deposito'),('Retiro'),('Consulta');
+insert into tipoTransaccion values (null,'Deposito'),(null,'Retiro'),(null,'Consulta');
 
 create table transacciones(
     id int auto_increment primary key,
@@ -61,3 +66,4 @@ create table transacciones(
     foreign key (idCuenta) references cuenta(id),
     foreign key (modalidad) references modalidad(id);
 );
+
