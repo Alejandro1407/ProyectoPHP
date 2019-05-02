@@ -7,6 +7,11 @@ body{
     height: 100%;
     width: 100%;
 }
+.panel{
+    padding-left: 20%;
+    padding-right: 15%;
+    min-height: 325px;
+}
 #theDiv{
     background-image: url("/ProyectoPHP/img/Public/Servicios/Servicios.jpg");
     background-repeat: no-repeat;

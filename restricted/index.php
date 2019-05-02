@@ -6,7 +6,7 @@
 ?>
 <body class="" >
 <?php 
-    base::Sidebar("Denys");
+    base::Sidebar("Alejandro");
     base::Header();
     base::Footer();
 ?>

@@ -172,8 +172,8 @@ public static function SideBar($Nombre){
                 <div class=\"iconos\">
                     <i class=\"fas fa-tools\"></i>
                 </div> 
-                <div class=\"opt\">
-                    <p>Administrar</p>
+                <div class=\"opt option-menu\" id=\"Dash\" >
+                    <p>DashBoard</p>
                 </div> 
             </div>
             <div class=\"options\"> 

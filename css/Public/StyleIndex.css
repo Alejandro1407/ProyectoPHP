@@ -6,6 +6,11 @@ body{
     background-size: 100%;
     background-attachment: fixed;
 }
+.panel{
+    padding-left: 20%;
+    padding-right: 15%;
+    min-height: 325px;
+}
 #Title{
     margin-top: 20%;
     margin-bottom: 15%;
@@ -16,6 +21,7 @@ body{
 .row{
     margin-right:0px;
 }
+
 
 @media (min-width: 256px) and (max-width: 576px){
 #Title{
