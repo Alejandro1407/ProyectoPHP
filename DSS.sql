@@ -5,7 +5,7 @@ use bancoDSS;
 create table tipoUsuario(
 	id int auto_increment primary key,
 	tipoUsuario varchar(50) not null unique
-)
+);
 
 create table usuario(
 	id int auto_increment primary key,
@@ -42,29 +42,22 @@ create table modalidad(
 
 insert into modalidad(modalidad) values ('Efectivo'),('Cheque');
 
-create table depositos(
-	id int auto_increment primary key,
-    idCuenta int not null,
-    deposito float not null,
-    modalidad int not null,
-    fecha datetime,
-    foreign key (idCuenta) references cuenta(id)
+
+create table tipoTransaccion(
+    id int auto_increment primary key,
+    tipoTransaccion varchar(30)
 );
 
-alter table depositos
-add constraint fk_modalidad foreign key (modalidad) references modalidad(id);
+insert into tipoTransaccion values ('Deposito'),('Retiro'),('Consulta');
 
-create table retiros(
-	id int auto_increment primary key,
+create table transacciones(
+    id int auto_increment primary key,
     idCuenta int not null,
-    retiro float not null,
+    monto float not null,
+    modalidad int not null
     fecha datetime,
-    foreign key (idCuenta) references cuenta(id)
-);
-
-create table consulta(
-	id int auto_increment primary key,
-    idCuenta int not null,
-    fecha datetime,
-    foreign key (idCuenta) references cuenta(id)
+    tipoTransaccion int,
+    foreign key (tipoTransaccion) references tipoTransaccion(id),
+    foreign key (idCuenta) references cuenta(id),
+    foreign key (modalidad) references modalidad(id);
 );
