@@ -48,7 +48,7 @@
                             </ul>          
                         </div>
                         <div class=\"navbar-nav nav-flex-icons ml-auto\" id=\"Sesion\">
-                            <a class=\"grey-text\" data-toggle=\"modal\" data-target=\"#modalLoginForm\"><span class=\"mr-3\"> <i class=\"fas fa-sign-in-alt\"></i>Entrar</span></a>
+                            <a class=\"black-text\" data-toggle=\"modal\" data-target=\"#modalLoginForm\"><span class=\"mr-3\"> <i class=\"fas fa-sign-in-alt\"></i>Entrar</span></a>
                         </div>
                             <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                             <span class=\"navbar-toggler-icon\"></span>
@@ -104,16 +104,6 @@
             </div>
             ");
         }*/
-/*
-public static function Header(){
-    echo <<<EO
-    <header>
-        <p>Banco - BBVA</p>
-    </header>
-EO;
-}
-
-*/
 
 public static function Footer(){
     print("
@@ -226,7 +216,7 @@ public static function SideBar($Nombre){
     ");
         }
 
-        public static function Scripts($Script){
+        public static function Scripts($IndexScript,$Script = ""){
             print("
                 <!-- Importacion de los Scripts -->
                 
@@ -234,11 +224,18 @@ public static function SideBar($Nombre){
                 <script src=\"/ProyectoPHP/js/popper.js\"></script>
                 <script src=\"/ProyectoPHP/js/bootstrap.js\"></script>
                 <script src=\"/ProyectoPHP/js/mdb.js\"></script>
-                <script src=\"/ProyectoPHP/js/Scripts/Scriptindex.js\"></script>
-                <script src=\"/ProyectoPHP/js/Scripts/$Script.js\"></script>
+                <script src=\"/ProyectoPHP/js/Scripts/ScriptIndex.js\"></script>
+                <script src=\"/ProyectoPHP/js/Scripts/$IndexScript.js\"></script>
+                
             ");
+            if($Script != ""){
+                print("
+                    <script src=\"/ProyectoPHP/js/Scripts/$Script.js\"></script>
+                ");
+            }
 
         }
+
 
 
     }//Fin de la clase
