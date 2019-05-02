@@ -216,7 +216,7 @@ public static function SideBar($Nombre){
     ");
         }
 
-        public static function Scripts($Script){
+        public static function Scripts($IndexScript,$Script = ""){
             print("
                 <!-- Importacion de los Scripts -->
                 
@@ -225,10 +225,17 @@ public static function SideBar($Nombre){
                 <script src=\"/ProyectoPHP/js/bootstrap.js\"></script>
                 <script src=\"/ProyectoPHP/js/mdb.js\"></script>
                 <script src=\"/ProyectoPHP/js/Scripts/ScriptIndex.js\"></script>
-                <script src=\"/ProyectoPHP/js/Scripts/$Script.js\"></script>
+                <script src=\"/ProyectoPHP/js/Scripts/$IndexScript.js\"></script>
+                
             ");
+            if($Script != ""){
+                print("
+                    <script src=\"/ProyectoPHP/js/Scripts/$Script.js\"></script>
+                ");
+            }
 
         }
+
 
 
     }//Fin de la clase

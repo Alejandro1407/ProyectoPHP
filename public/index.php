@@ -70,7 +70,7 @@
         
     <!-- Fin del contenido del sitio WEB -->
 <?php
-   base::Scripts("Scriptindex");
+   base::Scripts("Public/Scriptindex.js");
    base::Footer(); // Incluye el Footer ademas de los JS
 ?>
 </body>
