@@ -2,14 +2,17 @@
 
     define("Raiz",$_SERVER['DOCUMENT_ROOT']); //Se obtiene la raiz del sitio para facilitar los include
     include_once(Raiz."/ProyectoPHP/lib/page.php");
+    base::headAdmin();
     base::Head("Bienvenido","Private/StyleIndex"); //Incluye la cabecera e importa los css
     base::sidebarCliente("Alejandro");
+    
     function __autoload($clase){
         require_once("../class/" . $clase . ".class.php");
     }
 ?>
 
-<div class="contenedor">
+
+<div class="contenedor" id="Body">
       
     <div class="cuadro">
         <div class="cont-cuadro">

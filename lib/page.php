@@ -260,6 +260,14 @@ public static function SideBar($Nombre){
     ");
         }
 
+    public static function headAdmin(){
+        echo <<<EOOOO
+                <header>
+                    <p>Banco BBVA</p>
+                </header>
+EOOOO;
+    }
+
         public static function Scripts($IndexScript,$Script = ""){
             print("
                 <!-- Importacion de los Scripts -->
