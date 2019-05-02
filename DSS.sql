@@ -59,11 +59,10 @@ create table transacciones(
     id int auto_increment primary key,
     idCuenta int not null,
     monto float not null,
-    modalidad int not null
+    modalidad int not null,
     fecha datetime,
     tipoTransaccion int,
     foreign key (tipoTransaccion) references tipoTransaccion(id),
     foreign key (idCuenta) references cuenta(id),
-    foreign key (modalidad) references modalidad(id);
+    foreign key (modalidad) references modalidad(id)
 );
-
