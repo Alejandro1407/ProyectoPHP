@@ -23,7 +23,7 @@
             ");
         }//Fin de Head
         
-        /*public static function Header($BackGround,$Text){
+        public static function Header($BackGround,$Text){
             print("
             <header>
                 <nav class=\"Lato navbar p-1 shadow-none navbar-expand-md $BackGround navbar-light bg-white scrolling-navbar fixed-top\" id=\"TheNavBar\">
@@ -57,7 +57,7 @@
                 </nav>
             </header>
             ");
-        }*///Fin Header
+        }//Fin Header
     /*
         public static function Sidebar(){
 
@@ -104,7 +104,7 @@
             </div>
             ");
         }*/
-
+/*
 public static function Header(){
     echo <<<EO
     <header>
@@ -113,12 +113,17 @@ public static function Header(){
 EO;
 }
 
+*/
+
 public static function Footer(){
-    print ("
-    <footer>
-        <p>Sistema Bancario | Universidad Don Bosco | 2019 </p>
-    </footer>
-    ");
+    print("
+                <!-- Footer -->
+                <footer class=\"page-footer font-small red\">
+                    <div class=\"footer-copyright text-center py-3\">© 2018 Copyright:
+                        <a href=\"\">Banco Generico.com</a>
+                    </div>
+                </footer>
+                ");
 }
 
 public static function SideBar($Nombre){

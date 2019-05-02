@@ -9,7 +9,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 @import url('https://fonts.googleapis.com/css?family=Hammersmith+One|Montserrat|Raleway|Roboto+Mono');
 
-/* Globales */
+/* Globales */  
 .hr-vertical{   
     border:         none;
     border-left:    1px solid hsla(200, 10%, 50%,100);
@@ -66,13 +66,13 @@ body::-webkit-scrollbar-thumb
 .row{
     margin-right:0px;
 }
-/*
+
 .panel{
     padding-left: 25%;
     padding-right: 25%;
     min-height: 325px;
 }
-*/
+
 .Lato{
     font-family: 'Lato';
 }
