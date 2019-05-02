@@ -18,7 +18,7 @@ create table usuario(
         DUI char(10) unique,
 		tipoUsuario int,
         NIT char(17) unique not null,
-		foreign key (tipoUsuario) references 
+		foreign key (tipoUsuario) references tipoUsuario(id)
 );
 
 create table cuenta(
