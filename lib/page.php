@@ -48,7 +48,7 @@
                             </ul>          
                         </div>
                         <div class=\"navbar-nav nav-flex-icons ml-auto\" id=\"Sesion\">
-                            <a class=\"grey-text\" data-toggle=\"modal\" data-target=\"#modalLoginForm\"><span class=\"mr-3\"> <i class=\"fas fa-sign-in-alt\"></i>Entrar</span></a>
+                            <a class=\"black-text\" data-toggle=\"modal\" data-target=\"#modalLoginForm\"><span class=\"mr-3\"> <i class=\"fas fa-sign-in-alt\"></i>Entrar</span></a>
                         </div>
                             <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                             <span class=\"navbar-toggler-icon\"></span>
@@ -104,16 +104,6 @@
             </div>
             ");
         }*/
-/*
-public static function Header(){
-    echo <<<EO
-    <header>
-        <p>Banco - BBVA</p>
-    </header>
-EO;
-}
-
-*/
 
 public static function Footer(){
     print("
