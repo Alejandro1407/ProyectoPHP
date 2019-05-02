@@ -224,7 +224,7 @@ public static function SideBar($Nombre){
                 <script src=\"/ProyectoPHP/js/popper.js\"></script>
                 <script src=\"/ProyectoPHP/js/bootstrap.js\"></script>
                 <script src=\"/ProyectoPHP/js/mdb.js\"></script>
-                <script src=\"/ProyectoPHP/js/Scripts/Scriptindex.js\"></script>
+                <script src=\"/ProyectoPHP/js/Scripts/ScriptIndex.js\"></script>
                 <script src=\"/ProyectoPHP/js/Scripts/$Script.js\"></script>
             ");
 
