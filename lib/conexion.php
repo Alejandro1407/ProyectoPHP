@@ -1,5 +1,5 @@
 <?php
-class Database
+class conexion
 {
     private static $connection;
     private static $statement;
@@ -9,7 +9,7 @@ class Database
     private static function connect()
     {
         $server = "localhost";
-        $database = "dinterior";
+        $database = "bancodss";
         $username = "root";
         $password = "";
         $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => "set names utf8");     
@@ -29,41 +29,20 @@ class Database
         self::$connection = null;
     }
 
-    public static function executeRow($query, $values)
+    public static function executeUpdate($query, $values)
     {
         self::connect();
         self::$statement = self::$connection->prepare($query);
         $state = self::$statement->execute($values);
-        self::$id = self::$connection->lastInsertId();
         self::desconnect();
         return $state;
     }
-
-    public static function getRow($query, $values)
-    {
+    public static function executeQuery($query){
         self::connect();
         self::$statement = self::$connection->prepare($query);
-        self::$statement->execute($values);
+        $state = self::$statement->execute();
         self::desconnect();
-        return self::$statement->fetch();
-    }
-
-    public static function getRows($query, $values)
-    {
-        self::connect();
-        self::$statement = self::$connection->prepare($query);
-        self::$statement->execute($values);
-        self::desconnect();
-        return self::$statement->fetchAll();
-    }
-
-    public static function getRowsNum($query, $values)
-    {
-        self::connect();
-        self::$statement = self::$connection->prepare($query);
-        self::$statement->execute($values);
-        self::desconnect();
-        return self::$statement->fetchAll(PDO::FETCH_NUM);
+        return $state->fetch();
     }
 }
 ?>

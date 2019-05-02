@@ -58,6 +58,49 @@
             </header>
             ");
         }//Fin Header
+
+        public static function ModalLogin(){
+            print("<!-- Inicio de sesion-->
+            <div class=\"modal fade modal-dialog\" id=\"modalLoginForm\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">
+                <div class=\"modal-dialog\" role=\"document\">
+                    <form method=\"POST\" action=\"/ProyectoPHP/lib/iniciarsesion.php\">
+                        <div class=\"modal-content\">
+                            <div class=\"modal-header text-center\">
+                                <h4 class=\"modal-title w-100 font-weight-bold\">Iniciar sesion</h4>
+                                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+                                    <span aria-hidden=\"true\">&times;</span>
+                                </button>
+                            </div>
+                            <div class=\"modal-body mx-3\">
+                                <div class=\"md-form mb-5\">
+                                    <i class=\"fa fa-envelope prefix grey-text\"></i>
+                                    <div class=\"inner-addon right-addon\">
+                                        <i class=\"fas fa-check-circle d-none FormValid\" data-toggle=\"tooltip\" data-placement=\"up\" title=\"Email Valido\" id=\"LogInFormEmailValid\"></i>
+                                        <i class=\"fas fa-times-circle d-none FormInvalid\" data-toggle=\"tooltip\" data-placement=\"up\" title=\"Email No Valido\" id=\"LogInFormEmailInValid\"></i>
+                                        <input type=\"email\" id=\"LogInFormEmail\" class=\"form-control m-4_5 w-85\" placeholder=\"alguien@example.com\"> 
+                                    </div>
+                                </div>
+
+                                <div class=\"md-form mb-5\">
+                                    <i class=\"fa fa-lock prefix grey-text\"></i>
+                                    <div class=\"inner-addon right-addon\">
+                                        <i class=\"fas fa-check-circle d-none FormValid\" data-toggle=\"tooltip\" data-placement=\"up\" title=\"contraseña Valida\" id=\"LogInFormPassValid\"></i>
+                                        <i class=\"fas fa-times-circle d-none FormInvalid\" data-toggle=\"tooltip\" data-placement=\"up\" title=\"contraseña Invalida\" id=\"LogInFormPassInValid\"></i>
+                                        <a class=\"fas fa-eye grey-text mr-4\" id=\"ShowPassLogin\"></a> 
+                                        <input type=\"password\" id=\"LogInFormPassword\" class=\"form-control m-4_5 w-85\" placeholder=\"********\"> 
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class=\"modal-footer d-flex justify-content-center\">
+                                <button class=\"btn btn-indigo\" id=\"LogInFormBtn\" disabled><i class=\"fas fa-sign-in-alt\"></i> Iniciar Sesion</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Fin del inicio de sesion-->");
+        }
     /*
         public static function Sidebar(){
 
@@ -233,10 +276,6 @@ public static function SideBar($Nombre){
                     <script src=\"/ProyectoPHP/js/Scripts/$Script.js\"></script>
                 ");
             }
-
         }
-
-
-
     }//Fin de la clase
 ?>

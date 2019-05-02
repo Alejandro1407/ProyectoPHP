@@ -5,6 +5,7 @@
     base::Header("bg-white","grey-text"); // Muestra el Header del sitio
 ?>
 <body class="mt-5">
+    <?php base::ModalLogin(); ?>
     <!-- Inicio del contendio del sitio WEB -->
 
     <div id="theDiv">
