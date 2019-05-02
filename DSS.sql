@@ -3,22 +3,22 @@ create database bancoDSS;
 use bancoDSS;
 
 create table tipoUsuario(
-	id serial primary key,
+	id int auto_increment primary key,
 	tipoUsuario varchar(50) not null unique
 )
 
 create table usuario(
-		id int auto_increment primary key,
-        nombre varchar(75) not null,
-        email varchar(50) not null unique,
-        direccion varchar(75) unique not null,
-		contrasenya varchar(50) not null,
-        edad int not null,
-        sexo char(1) check(sexo = 'M' OR sexo = 'H'),
-        DUI char(10) unique,
-		tipoUsuario int,
-        NIT char(17) unique not null,
-		foreign key (tipoUsuario) references tipoUsuario(id)
+	id int auto_increment primary key,
+	nombre varchar(75) not null,
+	email varchar(50) not null unique,
+	direccion varchar(75) unique not null,
+	contrasenya varchar(50) not null,
+	edad int not null,
+	sexo char(1) check(sexo = 'M' OR sexo = 'H'),
+	DUI char(10) unique,
+	tipoUsuario int,
+	NIT char(17) unique not null,
+	foreign key (tipoUsuario) references tipoUsuario(id)
 );
 
 create table cuenta(
@@ -32,7 +32,7 @@ create table cuenta(
     interesR float,
     interesD float,
     interesC float,
-    foreign key (idCliente) references cliente(id)
+    foreign key (idCliente) references usuario(id)
 );
 
 create table modalidad(
