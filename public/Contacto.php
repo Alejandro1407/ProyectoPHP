@@ -3,6 +3,7 @@
     include_once(Raiz."/ProyectoPHP/lib/page.php");
     base::Head("Contacto","Public/StyleContacto"); //Incluye la cabecera e importa los css
     base::Header("bg-white","grey-text"); // Muestra el Header del sitio
+    
 ?>
 <body class="mt-5">
     <?php base::ModalLogin(); ?>

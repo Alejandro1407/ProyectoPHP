@@ -1,0 +1,53 @@
+@import url("/ProyectoPHP/css/Public/StyleIndex.css");
+
+body{
+    background-image: url("/ProyectoPHP/img/Public/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+.panel{
+    padding-left: 20%;
+    padding-right: 15%;
+    min-height: 325px;
+}
+#Title{
+    margin-top: 20%;
+    margin-bottom: 15%;
+    font-size: 50px;
+    height: 100%;
+    text-align: center;
+}
+.row{
+    margin-right:0px;
+}
+
+
+@media (min-width: 256px) and (max-width: 576px){
+#Title{
+    margin-top: 25% !important;
+    margin-bottom: 0% !important;
+    }
+
+}/* Declaracion sm */
+
+@media (min-width: 576px) and (max-width: 768px){
+    #Title{
+        margin-top: 25% !important;
+        margin-bottom: 0% !important;
+    }
+}/* Declaracion md*/
+
+@media (min-width: 768px) and (max-width: 992px){
+
+}/* Declaracion lg*/
+
+@media (min-width: 992px){
+
+}/* Declaracion xl*/
+
+
+
+
+
+

@@ -1,13 +1,12 @@
 /*
 *  
-*   Script que se ejecutara en todas las paginas de public
+*   Script que se ejecutara en todas las paginas de public/
 *
 */
 new WOW().init();
 var Valid_Email = 0;
 var Valid_Pass = 0;
 $(document).ready(function(){
-    
     $('#LogInFormEmail').on('keyup',function(e){
         CheckEmail(e.target.value,0);
     });
@@ -30,7 +29,7 @@ $(document).ready(function(){
     $('#LogInFormPassword').on("focusout",function (e) { 
         CheckPassword(e.target.value,1);
     });
-    $('#LogInFormBtn').on("click",function(){
+    $('#LogInFormBtn').on("click",function(e){
         FormLogIn();
     });
     $('#ShowPassLogin').on("click",function() {
@@ -91,4 +90,17 @@ function CheckPassword(Password,Isfocusout){
             $('#LogInFormPassInValid').removeClass("d-none");
         }
     }
+}
+
+function FormLogIn(e){
+    var Email = $('#LogInFormEmail').val();
+    var Password = $('#LogInFormPassword').val();
+     $.ajax({
+        url:'../lib/iniciarsesion.php',
+        type:'POST',
+        data:{'email':Email,'password':Password},
+        sucess:function(answer){
+            console.log(answer);
+        }
+    });
 }

@@ -1,10 +1,18 @@
 <?php
     define("Raiz",$_SERVER['DOCUMENT_ROOT']); //Se obtiene la raiz del sitio para facilitar los include
     include_once(Raiz."/ProyectoPHP/lib/page.php");
-    base::headAdmin();
-    base::Head("Home","Public/StyleIndex"); //Incluye la cabecera e importa los css
+    base::Head("Home","Public/StyleHome"); // Incluye la cabecera e importa los css
     base::Header("bg-white","grey-text"); // Muestra el Header del sitio
-?>
+    base::Scripts("Public/ScriptIndex"); // Incluye los JS Necesarios
+    if(isset($_GET['error'])): ?>
+        <script>
+            toastr.error('Debe authenticarse primero','¡Error!',{
+                "progressBar":true,
+                "closeButton": true
+            });
+        </script>
+<?php endif;?>
+
 <body class="mt-5">
     <?php base::ModalLogin(); ?>
     <!-- Inicio del contendio del sitio WEB -->
@@ -35,13 +43,10 @@
                 <h2 class="black-text font-weight-bold pt-3 grey-text wow slideInUp Lato">Equipo</h2>
                 <h5 class="grey-text wow slideInUp"> Nuestra compañia le asegura que nuestro personal esta altamente capacitado para atender
                 todas sus necesidades</h5>
-        </div>
-
-        
+        </div>   
     <!-- Fin del contenido del sitio WEB -->
 <?php
-   base::Scripts("Public/ScriptIndex");
-   base::Footer(); // Incluye el Footer ademas de los JS
+   base::Footer(); // Incluye el Footer
 ?>
 </body>
 </html>

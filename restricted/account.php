@@ -1,6 +1,6 @@
-<div class="bg-white row mr-0 mt-3 pl-2 mr-xl-5 ml-xl-3 mt-xl-5 shadow-lg Content">
+<div class="bg-white row mr-0 pl-2 mr-xl-5 ml-xl-3 mt-xl-5  Content">
 
-    <h2 class="grey-text pl-3 Lato pt-4 w-100">Cuenta</h2>
+    <h2 class="grey-text pl-3 Lato w-100">Cuenta</h2>
 
     <div class="container col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 pt-5 pb-5">
         <img class="img-fluid" src="/ProyectoPHP/img/Restricted/Logo.png" alt="">

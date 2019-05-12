@@ -1,20 +1,37 @@
 <?php
     define("Raiz",$_SERVER['DOCUMENT_ROOT']); //Se obtiene la raiz del sitio para facilitar los include
     include_once(Raiz."/ProyectoPHP/lib/page.php");
-    base::Head("BBVA - Dashboard","Restricted/StyleIndex"); //Incluye la cabecera e importa los css
+    base::Head("BBVA - Dashboard","Restricted/StyleHome"); //Incluye la cabecera e importa los css
     //base::Header("indigo","white-text"); // Muestra el Header del sitio
+    session_start();
+    /*if(!isset($_SESSION['Administrador'])){
+        header("location: /ProyectoPHP/public/index.php?error=Acceso No Authorizado");
+    }*/
+
 ?>
 <body class="" >
-<?php 
-    base::Sidebar("Alejandro");
-?>
+   <!-- Navbar -->
+    <?php
+        base::RestrictedHeader();
+    ?>
+    <!-- Navbar -->
 
-    <div class="contenedor" id="Body">
-        <!-- Aqui se cargara  la pagina segun se selecciona -->
+    <!-- Sidebar -->
+    <?php
+        base::SideAdminBar("Alejandro Alejo","alejandroalejo714@gmail.com");
+    ?>
+    <!-- Sidebar -->
+
+    <main class="pt-5 mx-lg-5">
+    <div class="container-fluid mt-5" id="Body">
+       <!--WorkArea-->
+        <!-- Tu Programacion Toxica Aqui -->
+      <!--/WorkArea-->
     </div>
+  </main>
 
 <?php
-   base::Scripts("Restricted/ScriptIndex","Restricted/ScriptRestricted"); // Incluye los JS
+   base::Scripts("Restricted/ScriptIndex","Restricted/ScriptHome"); // Incluye los JS
 ?>
 </body>
 </html>

@@ -1,41 +1,35 @@
 <?php
-
     define("Raiz",$_SERVER['DOCUMENT_ROOT']); //Se obtiene la raiz del sitio para facilitar los include
     include_once(Raiz."/ProyectoPHP/lib/page.php");
-    base::headAdmin();
-    base::Head("Bienvenido","Private/StyleIndex"); //Incluye la cabecera e importa los css
-    base::sidebarCliente("Alejandro");
-    
+    base::Head("Bienvenido","Private/StyleHome"); //Incluye la cabecera e importa los css
+    session_start();
+    /*if(!isset($_SESSION['Usuario'])){
+        header("location: /ProyectoPHP/public/index.php?error=Debe Autenticarse Primero");
+    }*/
     function __autoload($clase){
         require_once("../class/" . $clase . ".class.php");
     }
 ?>
+    <!-- Navbar -->
+      <?php
+        base::PrivateHeader();
+      ?>
+    <!-- Navbar -->
 
+    <!-- Sidebar -->
+      <?php
+        base::SideUserBar("Alejandro Alejo","alejandroalejo714@gmail.com");
+      ?>
+    <!-- Sidebar -->
 
-<div class="contenedor" id="Body">
-      
-    <div class="cuadro">
-        <div class="cont-cuadro">
-            <p class="titulo">Consultar Saldo</p>
-            <span><i class="fas fa-comments-dollar"></i></span><br><br>
-            <p>Consulta el Saldo</p>
-        </div>
+  <main class="pt-5 mx-lg-5">
+    <div class="container-fluid mt-5" id="Body">
+       <!--WorkArea-->
+        <!-- Tu Programacion Toxica Aqui -->
+      <!--/WorkArea-->
     </div>
-    <div class="cuadro">
-        <div class="cont-cuadro">
-            <p class="titulo">Mensajes</p>
-            <span><i class="fas fa-envelope"></i></span><br><br>
-            <p>Consulta los mensajes recibidos</p>
-        </div>
-    </div>
-    <div class="cuadro">
-        <div class="cont-cuadro">
-            <p class="titulo">Retiros</p>
-            <span><i class="fas fa-cash-register"></i></span><br><br>
-            <p>Efectuar un Retiro</p>
-        </div>
-    </div>    
-</div>
-
-    </body>
-</html>
+  </main>
+  
+<?php
+    base::Scripts("Private/ScriptIndex","Private/ScriptHome");
+?>

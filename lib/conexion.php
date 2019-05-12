@@ -1,48 +1,51 @@
-<?php
-class conexion
-{
-    private static $connection;
-    private static $statement;
-    public static $id;
-    public static $error;
+<?php 
+class conexion{
+    
+    private $conn;
 
-    private static function connect()
-    {
-        $server = "localhost";
-        $database = "bancodss";
-        $username = "root";
-        $password = "";
-        $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => "set names utf8");     
-        try
-        {
-            @self::$connection = new PDO("mysql:host=".$server."; dbname=".$database, $username, $password, $options);
+    function __construct(){
+        $host="localhost";
+        $dbname="SistemaBancario";
+        $usuario="root";
+        $contra="";
+
+        try{
+            @$this->conn = new PDO("mysql:host=$host;dbname=$dbname",$usuario,$contra);
+        }catch(Exception $e){
+            print ("¡Error!" . $e->getMessage());
+            die();
         }
-        catch(PDOException $exception)
-        {
-            throw new Exception($exception->getCode());
+    }  
+
+    function Reconnect(){
+        try{
+            @$this->conn = new PDO("mysql:host=$host;dbname=$dbname",$usuario,$contra);
+        }catch(Exception $e){
+            print ("¡Error!" . $e->getMessage());
+            die();
         }
     }
 
-    private static function desconnect()
-    {
-        self::$error = self::$statement->errorInfo();
-        self::$connection = null;
+    function ExecuteQuery($Query,$params = []){
+        try{
+            $gsent = $this->conn->prepare($Query); 
+            $gsent->execute(array_values($params));
+            return $gsent->fetchAll();  
+        }catch(Exception $e){
+            print("¡Error!" .$e->getMessage());
+            die();
+        }
     }
 
-    public static function executeUpdate($query, $values)
-    {
-        self::connect();
-        self::$statement = self::$connection->prepare($query);
-        $state = self::$statement->execute($values);
-        self::desconnect();
-        return $state;
+    function ExecuteUpdate($Query){
+        try{
+            $gsent = $this->conn->prepare($Query);
+            return $gsent->execute();
+        }catch(Exception $e){
+            print("¡Error!" .$e->getMessage());
+            die();
+        }
     }
-    public static function executeQuery($query){
-        self::connect();
-        self::$statement = self::$connection->prepare($query);
-        $state = self::$statement->execute();
-        self::desconnect();
-        return $state->fetch();
-    }
+
 }
 ?>

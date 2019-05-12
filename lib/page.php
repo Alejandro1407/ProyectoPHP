@@ -2,8 +2,8 @@
 /*
 *     Clase Base
 *     Contiene todas las definiciones del <Head> Necesarias
-*    Ademas de importar las librerias necesarias para su funcionamiento
-*    MDBootStrap,Jquery y FontAwesome
+*     Ademas de importar las librerias necesarias para su funcionamiento
+*     MDBootStrap,Jquery y FontAwesome
 *
 */
    class base {
@@ -19,7 +19,7 @@
                 <link rel='shortcut icon' type='image/x-icon' href=\"/ProyectoPHP/favicon.ico\">  
                 <link href=\"/ProyectoPHP/css/$CSS.css\" rel=\"stylesheet\">
             </head>
-            <body>
+            <body class=\"lighten-3\">
             ");
         }//Fin de Head
         
@@ -58,6 +58,159 @@
             </header>
             ");
         }//Fin Header
+        /* Funciones para el Usuario */
+        public static function PrivateHeader(){
+            print("<header>
+                    <nav class=\"navbar fixed-top navbar-expand-lg navbar-light white d-md-none d-lg-none d-xl-none scrolling-navbar\">
+                    <div class=\"container-fluid\">
+                        <a class=\"navbar-brand waves-effect\" href=\"/ProyectoPHP/private/index.php\">
+                            <strong class=\"blue-text\">BBVA</strong>
+                        </a>
+                        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"
+                        aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+                        <span class=\"navbar-toggler-icon\"></span>
+                        </button>
+                        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
+                        <ul class=\"navbar-nav mr-auto\">
+                            <li class=\"nav-item active\">
+                            <a class=\"nav-link waves-effect\"  href=\"#\"><i class=\"fas fa-chart-pie mr-3\"></i>DashBoard</a>
+                            </li>
+                            <li class=\"nav-item\">
+                            <a class=\"nav-link waves-effect\" href=\"#\"><i class=\"fas fa-money-bill-alt mr-3\"></i>Saldo</a>
+                            </li>
+                            <li class=\"nav-item\">
+                            <a class=\"nav-link waves-effect\" href=\"#\"><i class=\"fas fa-history mr-3\"></i>Historial</a>
+                            </li>
+                            <li class=\"nav-item\">
+                            <a class=\"nav-link waves-effect\" href=\"#\"><i class=\"fas fa-user mr-3\"></i>Perfil</a>
+                            </li>
+                        </ul>
+                        <ul class=\"navbar-nav nav-flex-icons\">
+                            <li class=\"nav-item\">
+                            <a href=\"/ProyectoPHP/lib/cerrarsesion.php\" class=\"nav-link btn btn-danger white-text rounded waves-effect\"><i class=\"fas fa-sign-out-alt mr-2\"></i>Cerrar Sesion</a>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                    </nav>
+                </header>
+            ");
+        }
+
+        public static function SideUserBar($Nombre,$Email){
+            print("    
+                    <div class=\"sidebar-fixed position-fixed\">
+                        <a class=\"logo-wrapper waves-effect\">
+                        <img src=\"/ProyectoPHP/img/Private/Icon.png\" class=\"w-100 img-fluid mb-0\" alt=\"Logo\">
+                        </a>
+                        <div class=\"list-group list-group-flush\">
+                        <h5 class=\"grey-text mx-auto h5-responsive\">$Nombre</h5>
+                        <p class=\"grey-text mx-auto\">$Email</p>
+                        <a href=\"#\" class=\"list-group-item active waves-effect option-menu\" id=\"Dash\">
+                            <i class=\"fas fa-chart-pie mr-3\"></i>Dashboard
+                        </a>
+                        <a href=\"#\" class=\"list-group-item list-group-item-action waves-effect option-menu\" id=\"Saldo\">
+                            <i class=\"fas fa-money-bill-alt mr-3\"></i>Saldo
+                        </a>
+                        <a href=\"#\" class=\"list-group-item list-group-item-action waves-effect option-menu\" id=\"History\">
+                            <i class=\"fas fa-history mr-3\"></i>Historial
+                        </a>
+                        <a href=\"#\" class=\"list-group-item list-group-item-action waves-effect option-menu\" id=\"Account\">
+                            <i class=\"fas fa-user mr-3\"></i>Perfil
+                        </a>
+                        <a href=\"/ProyectoPHP/lib/cerrarsesion.php\" class=\"list-group-item list-group-item-action waves-effect\">
+                            <i class=\"fas fa-sign-out-alt mr-2\"></i>Cerrar Sesion
+                        </a>
+                        </div>
+                    </div>"
+                );
+        }
+
+        /* Funciones para el Administrador */
+        public static function RestrictedHeader(){
+            print("<header>
+                    <nav class=\"navbar fixed-top navbar-expand-lg navbar-light white d-md-none d-lg-none d-xl-none scrolling-navbar\">
+                    <div class=\"container-fluid\">
+                        <a class=\"navbar-brand waves-effect\" href=\"/ProyectoPHP/private/index.php\">
+                            <strong class=\"blue-text\">BBVA</strong>
+                        </a>
+                        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"
+                        aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+                        <span class=\"navbar-toggler-icon\"></span>
+                        </button>
+                        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
+                        <ul class=\"navbar-nav mr-auto\">
+                            <li class=\"nav-item active\">
+                                <a class=\"nav-link waves-effect\"  href=\"#\"><i class=\"fas fa-chart-pie mr-3\"></i>DashBoard</a>
+                            </li>
+                            <li class=\"nav-item\">
+                                <a class=\"nav-link waves-effect\" href=\"#\"><i class=\"fas fa-piggy-bank mr-3\"></i>Depositos</a>
+                            </li>
+                            <li class=\"nav-item\">
+                                <a class=\"nav-link waves-effect\" href=\"#\"><i class=\"fas fa-hand-holding-usd mr-3\"></i>Retiros</a>
+                            </li>
+                            <li class=\"nav-item\">
+                                <a class=\"nav-link waves-effect\" href=\"#\"><i class=\"fas fa-money-bill-alt mr-3\"></i>Saldo</a>
+                            </li>
+                            <li class=\"nav-item\">
+                                <a class=\"nav-link waves-effect\" href=\"#\"><i class=\"fas fa-history mr-3\"></i>Historial</a>
+                            </li>
+                            <li class=\"nav-item\">
+                                <a class=\"nav-link waves-effect\" href=\"#\"><i class=\"fas fa-user mr-3\"></i>Perfil</a>
+                            </li>
+                            <li class=\"nav-item\">
+                                <a class=\"nav-link waves-effect\" href=\"#\"><i class=\"fas fa-clipboard-list mr-3\"></i>Otros</a>
+                            </li>
+                        </ul>
+                        <ul class=\"navbar-nav nav-flex-icons\">
+                            <li class=\"nav-item\">
+                            <a href=\"/ProyectoPHP/lib/cerrarsesion.php\" class=\"nav-link btn btn-danger white-text rounded waves-effect\"><i class=\"fas fa-sign-out-alt mr-2\"></i>Cerrar Sesion</a>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                    </nav>
+                </header>
+            ");
+        }
+
+        public static function SideAdminBar($Nombre,$Email){
+            print("    
+                    <div class=\"sidebar-fixed position-fixed\">
+                        <a class=\"logo-wrapper waves-effect\">
+                        <img src=\"/ProyectoPHP/img/Private/Icon.png\" class=\"w-100 img-fluid mb-0\" alt=\"Logo\">
+                        </a>
+                        <div class=\"list-group list-group-flush\">
+                        <h5 class=\"grey-text mx-auto h5-responsive\">$Nombre</h5>
+                        <p class=\"grey-text mx-auto\">$Email</p>
+                        <a href=\"#\" class=\"list-group-item active waves-effect option-menu\" id=\"Dash\">
+                            <i class=\"fas fa-chart-pie mr-3\"></i>Dashboard
+                        </a>
+                        <a href=\"#\" class=\"list-group-item list-group-item-action waves-effect option-menu\" id=\"Deposito\">
+                            <i class=\"fas fa-piggy-bank mr-3\"></i>Depositos
+                        </a>
+                        <a href=\"#\" class=\"list-group-item list-group-item-action waves-effect option-menu\" id=\"Retiros\">
+                            <i class=\"fas fa-hand-holding-usd mr-3\"></i>Retiros
+                        </a>
+                        <a href=\"#\" class=\"list-group-item list-group-item-action waves-effect option-menu\" id=\"Saldo\">
+                            <i class=\"fas fa-money-bill-alt mr-3\"></i>Saldo
+                        </a>
+                        <a href=\"#\" class=\"list-group-item list-group-item-action waves-effect option-menu\" id=\"History\">
+                            <i class=\"fas fa-history mr-3\"></i>Historial
+                        </a>
+                        <a href=\"#\" class=\"list-group-item list-group-item-action waves-effect option-menu\" id=\"Account\">
+                            <i class=\"fas fa-user mr-3\"></i>Perfil
+                        </a>
+                        <a href=\"#\" class=\"list-group-item list-group-item-action waves-effect option-menu\" id=\"Varios\">
+                            <i class=\"fas fa-clipboard-list mr-3\"></i>Otros
+                        </a>
+                        <a href=\"/ProyectoPHP/lib/cerrarsesion.php\" class=\"list-group-item list-group-item-action waves-effect\">
+                            <i class=\"fas fa-sign-out-alt mr-2\"></i>Cerrar Sesion
+                        </a>
+                        </div>
+                    </div>"
+                );
+        }
 
         public static function ModalLogin(){
             print("<!-- Inicio de sesion-->
@@ -77,7 +230,7 @@
                                     <div class=\"inner-addon right-addon\">
                                         <i class=\"fas fa-check-circle d-none FormValid\" data-toggle=\"tooltip\" data-placement=\"up\" title=\"Email Valido\" id=\"LogInFormEmailValid\"></i>
                                         <i class=\"fas fa-times-circle d-none FormInvalid\" data-toggle=\"tooltip\" data-placement=\"up\" title=\"Email No Valido\" id=\"LogInFormEmailInValid\"></i>
-                                        <input type=\"email\" id=\"LogInFormEmail\" class=\"form-control m-4_5 w-85\" placeholder=\"alguien@example.com\"> 
+                                        <input type=\"email\" id=\"LogInFormEmail\" name=\"email\" class=\"form-control m-4_5 w-85\" placeholder=\"alguien@example.com\"> 
                                     </div>
                                 </div>
 
@@ -87,7 +240,7 @@
                                         <i class=\"fas fa-check-circle d-none FormValid\" data-toggle=\"tooltip\" data-placement=\"up\" title=\"contraseña Valida\" id=\"LogInFormPassValid\"></i>
                                         <i class=\"fas fa-times-circle d-none FormInvalid\" data-toggle=\"tooltip\" data-placement=\"up\" title=\"contraseña Invalida\" id=\"LogInFormPassInValid\"></i>
                                         <a class=\"fas fa-eye grey-text mr-4\" id=\"ShowPassLogin\"></a> 
-                                        <input type=\"password\" id=\"LogInFormPassword\" class=\"form-control m-4_5 w-85\" placeholder=\"********\"> 
+                                        <input type=\"password\" name=\"password\" id=\"LogInFormPassword\" class=\"form-control m-4_5 w-85\" placeholder=\"********\"> 
                                     </div>
                                 </div>
 
@@ -101,179 +254,23 @@
             </div>
             <!-- Fin del inicio de sesion-->");
         }
-    /*
-        public static function Sidebar(){
 
-            print("  <!-- Side Bar-->
-            <div id=\"SideBar\" class=\"bg-white shadow-md justify-content-center pt-4 pl-4 pr-3 fixed-left\">
-                <img class=\"rounded-circle img-fluid float-left mr-2\" width=\"85\" heigth=\"65\" src=\"/ProyectoPHP/img/Restricted/Default.png\" >
-                <p class=\"grey-text font-weight-bold pl-4 pb-0 mb-0 pt-3 text-center txt\">Alejandro Alejo</p>
-                <p class=\"grey-text pl-4 pt-0 mt-0 font-small text-center txt\">Administrador</p>
-        
-                <p class=\"grey-text clear-both pl-2 pt-3 mb-1 Lato txt-head\">Main</p>
-
-                <div class=\"pl-2 pt-2 option-menu\" id=\"Dash\">
-                    <img src=\"/ProyectoPHP/img/Restricted/DashBoard.png\" class=\"img-fluid mr-3 float-left\">
-                    <p class=\"grey-text Lato pt-1 pb-3 mb-1 txt\">DashBoard</p>
-                </div>
-
-                <div class=\"pl-2 pt-2 option-menu\" id=\"AddUser\">
-                    <img src=\"/ProyectoPHP/img/Restricted/AddUser.png\" width=\"35\" height=\"35\" class=\"img-fluid mr-3 float-left\">
-                    <p class=\"grey-text Lato pt-1 pb-3 mb-1 txt\">Agregar Usuario</p>
-                </div>
-
-                <div class=\"pl-2 pt-2 option-menu\" id=\"Mail\">
-                    <img src=\"/ProyectoPHP/img/Restricted/Mail.png\" class=\"img-fluid mr-3 float-left\" >
-                    <p class=\"grey-text Lato pt-1 pb-3 mb-1 txt\">Mail</p>
-                </div>
-        
-                <div class=\"pl-2 pt-2 option-menu\" id=\"Consult\">
-                    <img src=\"/ProyectoPHP/img/Restricted/Consulta.png\" class=\"img-fluid mr-3 float-left\">
-                    <p class=\"grey-text Lato pt-1 pb-3 mb-1 txt\">Consult</p>
-                </div>
-        
-                <div class=\"pl-2 pt-2 option-menu\" id=\"History\">
-                    <img src=\"/ProyectoPHP/img/Restricted/Historial.png\" class=\"img-fluid mr-3 float-left\">
-                    <p class=\"grey-text Lato pt-1 pb-3 mb-1 txt\">History</p>
-                </div>
-
-                <p class=\"grey-text clear-both pl-2 pt-1 mb-1 Lato txt-head2\">Account</p>
-                
-                <div class=\"pl-2 pt-2 option-menu\" id=\"Account\">
-                    <img src=\"/ProyectoPHP/img/Restricted/Cuenta.png\" class=\"img-fluid mr-3 float-left\">
-                    <p class=\"grey-text Lato pt-1 pb-3 txt\">Profile</p>
-                </div>
-        
-            </div>
-            ");
-        }*/
-
-public static function Footer(){
-    print("
-                <!-- Footer -->
-                <footer class=\"page-footer font-small red\">
-                    <div class=\"footer-copyright text-center py-3\">© 2018 Copyright:
-                        <a href=\"\">Banco Generico.com</a>
-                    </div>
-                </footer>
-                ");
-}
-
-public static function SideBar($Nombre){
-    print("
-    <div class=\"contenedor-padre\">
-    <div class=\"panel\">
-        <div class=\"perfil\">
-            <li><i class=\"fas fa-user-circle\"></i></li>
-            <li><p>$Nombre</p><p>Administrador</p></li>
-        </div>
-        <div class=\"con_options\">
-            <div class=\"options\"> 
-                <div class=\"iconos\">
-                    <i class=\"fas fa-tools\"></i>
-                </div> 
-                <div class=\"opt option-menu\" id=\"Dash\" >
-                    <p>DashBoard</p>
-                </div> 
-            </div>
-            <div class=\"options\"> 
-                <div class=\"iconos\">
-                    <i class=\"fas fa-piggy-bank\"></i>
-                </div> 
-                
-                <div class=\"opt\">
-                    <p>Retiros</p>
-                </div> 
-            </div>
-            <div class=\"options\"> 
-                <div class=\"iconos\">
-                    <i class=\"fas fa-question-circle\"></i> 
-                </div> 
-                <div class=\"opt\">
-                    <p>Consultas</p>
-                </div> 
-            </div>
-            <div class=\"options\"> 
-                <div class=\"iconos\">
-                    <i class=\"fas fa-history\"></i>
-                </div> 
-                <div class=\"opt\">
-                    <p>Historial</p>
-                </div> 
-            </div>
-            <div class=\"options\"> 
-                <div class=\"iconos\">
-                    <i class=\"fas fa-user-cog\"></i>
-                </div> 
-                <div class=\"opt\">
-                    <p>Perfil</p>
-                </div> 
-            </div>
-        </div>
-        <div class=\"foot\">
-                <hr>
-                <p>BBVA</p>
-        </div>
-    </div>
-    ");
-    }
-
- public static function sidebarCliente($Nombre){
-    print("
-    <div class=\"contenedor-padre\">
-    <div class=\"panel\">
-        <div class=\"perfil\">
-            <li><i class=\"fas fa-user-circle\"></i></li>
-            <li><p>$Nombre</p><p>Cliente</p></li>
-        </div>
-        <div class=\"con_options\">
-            <div class=\"options\"> 
-                <div class=\"iconos\">
-                <i class=\"fas fa-coins\"></i>
-                </div> 
-                <div class=\"opt\">
-                    <p>Operaciones</p>
-                </div> 
-            </div>
-            <div class=\"options\"> 
-                <div class=\"iconos\">
-                    <i class=\"fas fa-history\"></i>
-                </div> 
-                <div class=\"opt\">
-                    <p>Historial</p>
-                </div> 
-            </div>
-            <div class=\"options\"> 
-                <div class=\"iconos\">
-                    <i class=\"fas fa-user-cog\"></i>
-                </div> 
-                <div class=\"opt\">
-                    <p>Perfil</p>
-                </div> 
-            </div>
-        </div>
-        <div class=\"foot\">
-                <hr>
-                <p>BBVA</p>
-        </div>
-    </div>
-    ");
+        public static function Footer(){
+            print("
+                    <!-- Footer -->
+                    <footer class=\"page-footer font-small red\">
+                        <div class=\"footer-copyright text-center py-3\">© 2018 Copyright:
+                            <a href=\"\">Banco Generico.com</a>
+                        </div>
+                    </footer>
+                    ");
         }
-
-    public static function headAdmin(){
-        echo <<<EOOOO
-                <header>
-                    <p>Banco BBVA</p>
-                </header>
-EOOOO;
-    }
-
         public static function Scripts($IndexScript,$Script = ""){
             print("
                 <!-- Importacion de los Scripts -->
-                
                 <script src=\"/ProyectoPHP/js/jquery.js\"></script>
                 <script src=\"/ProyectoPHP/js/popper.js\"></script>
+                <script  src=\"/ProyectoPHP/js/toastr.js\"></script>
                 <script src=\"/ProyectoPHP/js/bootstrap.js\"></script>
                 <script src=\"/ProyectoPHP/js/mdb.js\"></script>
                 <script src=\"/ProyectoPHP/js/Scripts/ScriptIndex.js\"></script>
@@ -286,5 +283,5 @@ EOOOO;
                 ");
             }
         }
-    }//Fin de la clase
+}//Fin de la clase
 ?>
