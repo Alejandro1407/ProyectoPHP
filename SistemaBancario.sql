@@ -1,6 +1,6 @@
-CREATE DATABASE SistemaBancario;
+CREATE DATABASE SistemaBancario1;
 
-USE SistemaBancario;
+USE SistemaBancario1;
 
 CREATE TABLE TipoUsuario(
 	Id INT AUTO_INCREMENT PRIMARY KEY,
@@ -20,7 +20,7 @@ CREATE TABLE Usuario(
     Telefono CHAR(9) NOT NULL UNIQUE,
 	Pass VARCHAR(100) NOT NULL,
 	Edad INT NOT NULL,
-	Sexo CHAR(1) CHECK(Sexo = 'M' OR Sexo = 'H'),
+	Sexo CHAR(1) NOT NULL,
 	DUI char(10) UNIQUE,
 	TipoUsuario INT,
 	NIT char(17) UNIQUE NOT NULL,
