@@ -32,11 +32,6 @@ INSERT INTO Usuario VALUES ( null,'administrador','administrador','administrador
 --Cliente por defecto
 INSERT INTO Usuario VALUES ( null,'Victor Alejandro','Alejo Gálvez','alejandroalejo714@gmail.com','Apopitha','1234-6789',SHA2('Password01',256),19,'M','21345678-9',1,'123456789012357');
 
---Cuenta del Administrador
-INSERT INTO Cuenta VALUES (NULL,'CP00 0000 0000 00 0000000001',1,1,100);
-
---Cuenta del cliente
-INSERT INTO Cuenta VALUES (NULL,'CP00 0000 0000 00 0000000002',2,1,100);
 /* Define el funcionamiento de las cuentas */
 
 CREATE TABLE TipoCuenta(
@@ -65,6 +60,12 @@ CREATE TABLE Cuenta(
     FOREIGN KEY (IdUsuario) REFERENCES Usuario(Id),
     FOREIGN KEY (TipoCuenta) REFERENCES TipoCuenta(Id)
 );
+
+--Cuenta del Administrador
+INSERT INTO Cuenta VALUES (NULL,'CP00 0000 0000 00 0000000001',1,1,100);
+
+--Cuenta del cliente
+INSERT INTO Cuenta VALUES (NULL,'CP00 0000 0000 00 0000000002',2,1,100);
 
 /* Define las transacciones */
 create table modalidad(
