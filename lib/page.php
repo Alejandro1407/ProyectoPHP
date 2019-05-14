@@ -303,6 +303,7 @@
                 <script src=\"/ProyectoPHP/js/bootstrap.js\"></script>
                 <script src=\"/ProyectoPHP/js/mdb.js\"></script>
                 <script src=\"/ProyectoPHP/js/addons/datatables.js\"></script>
+                <script src=\"/ProyectoPHP/js/addons/datatables-responsive.js\"></script>
                 <script src=\"/ProyectoPHP/js/moment.js\"></script>
                 <script src=\"/ProyectoPHP/js/daterangepicker.js\"></script>
                 <script src=\"/ProyectoPHP/js/Scripts/ScriptIndex.js\"></script>

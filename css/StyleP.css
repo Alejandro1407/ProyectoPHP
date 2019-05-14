@@ -10,6 +10,8 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 @import url('https://fonts.googleapis.com/css?family=Hammersmith+One|Montserrat|Raleway|Roboto+Mono');
 @import url('/ProyectoPHP/css/addons/datatables.css');
+@import url('/ProyectoPHP/css/addons/datatables-responsive.css');
+@import url('/ProyectoPHP/css/addons/datatables-buttons.css');
 @import url('/ProyectoPHP/css/daterangepicker.css');
 /* Globales */  
 .hr-vertical{
