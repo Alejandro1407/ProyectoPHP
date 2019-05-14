@@ -1,6 +1,6 @@
 CREATE DATABASE SistemaBancario;
 
-USE SistemaBancario1;
+USE SistemaBancario;
 
 CREATE TABLE TipoUsuario(
 	Id INT AUTO_INCREMENT PRIMARY KEY,
