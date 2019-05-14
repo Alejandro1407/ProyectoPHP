@@ -162,7 +162,7 @@
                                 <a class=\"nav-link waves-effect option-menu-xs\" id=\"Account\" href=\"#\"><i class=\"fas fa-user mr-3\"></i>Perfil</a>
                             </li>
                             <li class=\"nav-item\">
-                                <a class=\"nav-link waves-effect option-menu-xs\"  id=\"Varios\" href=\"#\"><i class=\"fas fa-clipboard-list mr-3\"></i>Otros</a>
+                                <a class=\"nav-link waves-effect option-menu-xs\"  id=\"Interes\" href=\"#\"><i class=\"fas fa-clipboard-list mr-3\"></i>Otros</a>
                             </li>
                         </ul>
                         <ul class=\"navbar-nav nav-flex-icons\">
@@ -207,8 +207,8 @@
                         <a href=\"#\" class=\"list-group-item list-group-item-action waves-effect option-menu\" id=\"Account\">
                             <i class=\"fas fa-user mr-3\"></i>Perfil
                         </a>
-                        <a href=\"#\" class=\"list-group-item list-group-item-action waves-effect option-menu\" id=\"Varios\">
-                            <i class=\"fas fa-clipboard-list mr-3\"></i>Otros
+                        <a href=\"#\" class=\"list-group-item list-group-item-action waves-effect option-menu\" id=\"Interes\">
+                            <i class=\"fas fa-clipboard-list mr-3\"></i>Interes
                         </a>
                         <a data-toggle=\"modal\" data-target=\"#modalConfirmSesion\" class=\"list-group-item list-group-item-action waves-effect\">
                             <i class=\"fas fa-sign-out-alt mr-2\"></i>Cerrar Sesion

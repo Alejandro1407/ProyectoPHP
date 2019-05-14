@@ -1,7 +1,7 @@
 var actual = $('.sidebar-fixed').find('#Dash');
 var actualxs = $('.navbar').find('#Dash');
 $(document).ready(function(){
-    $('#Body').load("/ProyectoPHP/restricted/cuentas.php");
+    $('#Body').load("/ProyectoPHP/restricted/dashboard.php");
     $('.option-menu').on('click',function(e){
         console.log(actual);
         actual[0].className = "list-group-item list-group-item-action waves-effect option-menu";
@@ -46,8 +46,8 @@ function MostrarPage(id){
         case 'Account':
             $('#Body').load("/ProyectoPHP/restricted/account.php");
             break;
-        case 'Varios':
-            $('#Body').load("/ProyectoPHP/restricted/varios.php");
+        case 'Interes':
+            $('#Body').load("/ProyectoPHP/restricted/interes.php");
             break;
     }
 }

@@ -1,6 +1,6 @@
 CREATE DATABASE SistemaBancario;
 
-USE SistemaBancario1;
+USE SistemaBancario;
 
 CREATE TABLE TipoUsuario(
 	Id INT AUTO_INCREMENT PRIMARY KEY,
@@ -63,11 +63,14 @@ CREATE TABLE Cuenta(
     FOREIGN KEY (TipoCuenta) REFERENCES TipoCuenta(Id)
 );
 
+Alter table Cuenta
+add constraint unique (NCuenta);
+
 /*Cuenta del Administrador*/
-INSERT INTO Cuenta VALUES (NULL,'CP00 0000 0000 00 0000000001',1,1,100);
+INSERT INTO Cuenta VALUES (NULL,'CP00 0000 00 0000000001',1,1,100);
 
 /*Cuenta del cliente*/
-INSERT INTO Cuenta VALUES (NULL,'CP00 0000 0000 00 0000000002',2,1,100);
+INSERT INTO Cuenta VALUES (NULL,'CP00 0000 00 0000000002',2,1,100);
 
 /* Define las transacciones */
 create table modalidad(
@@ -93,7 +96,7 @@ create table transacciones(
     fecha datetime,
     tipoTransaccion int,
     foreign key (tipoTransaccion) references tipoTransaccion(id),
-    foreign key (idCuenta) references cuenta(id),
+    foreign key (idCuenta) references Cuenta(id),
     foreign key (modalidad) references modalidad(id)
 );
 

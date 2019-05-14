@@ -37,10 +37,10 @@ class conexion{
         }
     }
 
-    function ExecuteUpdate($Query){
+    function ExecuteUpdate($Query,$params = []){
         try{
             $gsent = $this->conn->prepare($Query);
-            return $gsent->execute();
+            return $gsent->execute($params);
         }catch(Exception $e){
             print("¡Error!" .$e->getMessage());
             die();
