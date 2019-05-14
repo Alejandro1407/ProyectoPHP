@@ -26,10 +26,12 @@ CREATE TABLE Usuario(
 	NIT char(17) UNIQUE NOT NULL,
 	FOREIGN KEY (TipoUsuario) REFERENCES TipoUsuario(Id)
 );
---Administrador por defecto
+
+
+/*Administrador por defecto*/
 INSERT INTO Usuario VALUES ( null,'administrador','administrador','administrador@gmail.com','Apopas','1234-5678',SHA2('Password01',256),19,'M','12345678-9',1,'123456789012345');
 
---Cliente por defecto
+/*Cliente por defecto*/
 INSERT INTO Usuario VALUES ( null,'Victor Alejandro','Alejo Gálvez','alejandroalejo714@gmail.com','Apopitha','1234-6789',SHA2('Password01',256),19,'M','21345678-9',2,'123456789012357');
 
 /* Define el funcionamiento de las cuentas */
@@ -61,10 +63,10 @@ CREATE TABLE Cuenta(
     FOREIGN KEY (TipoCuenta) REFERENCES TipoCuenta(Id)
 );
 
---Cuenta del Administrador
+/*Cuenta del Administrador*/
 INSERT INTO Cuenta VALUES (NULL,'CP00 0000 0000 00 0000000001',1,1,100);
 
---Cuenta del cliente
+/*Cuenta del cliente*/
 INSERT INTO Cuenta VALUES (NULL,'CP00 0000 0000 00 0000000002',2,1,100);
 
 /* Define las transacciones */
@@ -94,3 +96,13 @@ create table transacciones(
     foreign key (idCuenta) references cuenta(id),
     foreign key (modalidad) references modalidad(id)
 );
+
+/*Tabla super pro de los intereses Bv*/
+create table interes (
+	idTipoTransaccion int not null,
+    interes float not null,
+    foreign key (idTipoTransaccion) references tipoTransaccion (id)
+);
+
+alter table interes
+add nGratuitas int not null;
