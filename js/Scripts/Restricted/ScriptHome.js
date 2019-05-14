@@ -1,11 +1,9 @@
-var actual = $('#Dash');
-var actualxs = $('#Dash');
+var actual = $('.sidebar-fixed').find('#Dash');
+var actualxs = $('.navbar').find('#Dash');
 $(document).ready(function(){
-    console.log("Work");
-
-    $('#Body').load("/ProyectoPHP/restricted/dashboard.php");
-    
+    $('#Body').load("/ProyectoPHP/restricted/cuentas.php");
     $('.option-menu').on('click',function(e){
+        console.log(actual);
         actual[0].className = "list-group-item list-group-item-action waves-effect option-menu";
         actual[0] = e.target;
         actual[0].className = "list-group-item active waves-effect option-menu";
@@ -26,6 +24,9 @@ function MostrarPage(id){
     switch (id){
         case 'Dash':
             $('#Body').load("/ProyectoPHP/restricted/dashboard.php");
+            break;
+        case 'Cuentas':
+            $('#Body').load("/ProyectoPHP/restricted/cuentas.php");
             break;
         case 'Deposito':
             $('#Body').load("/ProyectoPHP/restricted/depositos.php");

@@ -9,7 +9,7 @@
 @import url("/ProyectoPHP/css/toastr.css");
 @import url('https://fonts.googleapis.com/css?family=Lato');
 @import url('https://fonts.googleapis.com/css?family=Hammersmith+One|Montserrat|Raleway|Roboto+Mono');
-
+@import url('/ProyectoPHP/css/addons/datatables.css');
 /* Globales */  
 .hr-vertical{
     border:         none;

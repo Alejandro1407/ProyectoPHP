@@ -1,5 +1,5 @@
-var actual = $('#Dash');
-var actualxs = $('#Dash');
+var actual = $('.sidebar-fixed').find('#Dash');
+var actualxs = $('.navbar').find('#Dash');
 $(document).ready(function(){
     $('#Body').load("/ProyectoPHP/private/dashboard.php");
     

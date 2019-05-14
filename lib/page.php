@@ -144,6 +144,9 @@
                                 <a class=\"nav-link waves-effect option-menu-xs\" id=\"Dash\"  href=\"#\"><i class=\"fas fa-chart-pie mr-3\"></i>DashBoard</a>
                             </li>
                             <li class=\"nav-item\">
+                                <a class=\"nav-link waves-effect option-menu-xs\" id=\"Cuentas\"  href=\"#\"><i class=\"fas fa-users mr-3\"></i>Cuentas</a>
+                            </li>
+                            <li class=\"nav-item\">
                                 <a class=\"nav-link waves-effect option-menu-xs\" id=\"Deposito\" href=\"#\"><i class=\"fas fa-piggy-bank mr-3\"></i>Depositos</a>
                             </li>
                             <li class=\"nav-item\">
@@ -185,6 +188,9 @@
                         <p class=\"grey-text mx-auto\">$Email</p>
                         <a href=\"#\" class=\"list-group-item active waves-effect option-menu\" id=\"Dash\">
                             <i class=\"fas fa-chart-pie mr-3\"></i>Dashboard
+                        </a>
+                        <a href=\"#\" class=\"list-group-item list-group-item-action waves-effect option-menu\" id=\"Cuentas\">
+                            <i class=\"fas fa-users mr-3\"></i>Cuentas
                         </a>
                         <a href=\"#\" class=\"list-group-item list-group-item-action waves-effect option-menu\" id=\"Deposito\">
                             <i class=\"fas fa-piggy-bank mr-3\"></i>Depositos
@@ -296,9 +302,9 @@
                 <script  src=\"/ProyectoPHP/js/toastr.js\"></script>
                 <script src=\"/ProyectoPHP/js/bootstrap.js\"></script>
                 <script src=\"/ProyectoPHP/js/mdb.js\"></script>
+                <script src=\"/ProyectoPHP/js/addons/datatables.js\"></script>
                 <script src=\"/ProyectoPHP/js/Scripts/ScriptIndex.js\"></script>
                 <script src=\"/ProyectoPHP/js/Scripts/$IndexScript.js\"></script>
-                
             ");
             if($Script != ""){
                 print("
