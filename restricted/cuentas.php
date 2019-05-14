@@ -24,7 +24,5 @@
 </table>
 
 <script>
-    $(document).ready( function () {
         $('#CuentasTable').DataTable();
-    });
 </script>
