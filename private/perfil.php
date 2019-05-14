@@ -6,7 +6,7 @@
     
     $conn = new conexion;
     $Id = $_COOKIE['Id'];
-    $rs = $conn->ExecuteQuery("SELECT CONCAT(u.Nombre,' ',u.Apellidos ) AS Nombres, c.NCuenta, u.Email, u.Pass, u.Edad, IF(u.Sexo = 'M','Masculino','Femenino') AS Sexo FROM Usuario u INNER JOIN Cuenta c ON u.Id = c.IdUsuario  WHERE u.Id = $Id");
+    $rs = $conn->ExecuteQuery("SELECT u.Id,CONCAT(u.Nombre,' ',u.Apellidos ) AS Nombres, c.NCuenta, u.Email, u.Pass, u.Edad, IF(u.Sexo = 'M','Masculino','Femenino') AS Sexo FROM Usuario u INNER JOIN Cuenta c ON u.Id = c.IdUsuario  WHERE u.Id = $Id");
     $x = $rs[0];
 ?>
 <div class="row">
@@ -18,6 +18,8 @@
     </div>
     <div class="container col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 pr-5">
         <h5 class="Lato grey-text">Datos Personales</h5>
+        <input type="hidden" name="Id" id="Id" value="<?=$x["Id"]?>">
+        <input type="hidden" name="Id" id="Pass" value="<?=$x["Pass"]?>">
         <div class="md-form Lato">
         <i class="fas fa-user prefix grey-text"></i>
             <input class="form-control m-4_5 w-85" name="PNombre" type="text" value="<?=$x["Nombres"]?>" disabled>
@@ -57,7 +59,7 @@
             <i class="fas fa-venus-mars prefix grey-text"></i>
             <input class="form-control m-4_5 w-85" name="PNombre" type="text" value="<?=$x["Sexo"]?>" disabled>
         </div>
-        <button class="btn btn-success" disabled><i class="fas fa-check-circle mr-3"></i>Actualizar</button>
+
     </div>
 </div>
 
@@ -75,14 +77,13 @@
         </button>
       </div>
       <div class="modal-body mx-3">
-
         <div class="md-form mb-5">
             <i class="fa fa-lock prefix grey-text"></i>
             <div class="inner-addon right-addon">
                 <i class="fas fa-check-circle d-none FormValid" data-toggle="tooltip" data-placement="up" title="contraseña Valida" id="FormPassOldValid"></i>
                 <i class="fas fa-times-circle d-none FormInvalid" data-toggle="tooltip" data-placement="up" title="contraseña Invalida" id="FormPassOldInValid"></i>
                 <a class="fas fa-eye grey-text mr-4 ShowPass" id="ShowOldPass"></a> 
-                <input type="password" name="password" id="ChangePassFormOld" class="form-control m-4_5 w-85" placeholder="Antigua contraseña"> 
+                <input type="password" name="password" id="ChangePassFormOld" tabindex="0" data-toggle="popover0" data-trigger="focus"  title="Formato Invalido"  data-content="La contraseña debe contener una Mayuscula, minusculas y un numero" class="form-control m-4_5 w-85 Pass" placeholder="Antigua contraseña"> 
             </div>
         </div>
         <div class="md-form mb-5">
@@ -91,7 +92,7 @@
                 <i class="fas fa-check-circle d-none FormValid" data-toggle="tooltip" data-placement="up" title="contraseña Valida" id="FormPassNew1Valid"></i>
                 <i class="fas fa-times-circle d-none FormInvalid" data-toggle="tooltip" data-placement="up" title="contraseña Invalida" id="FormPassNew1InValid"></i>
                 <a class="fas fa-eye grey-text mr-4 ShowPass" id="ShowNew2Pass"></a> 
-                <input type="password" name="password" id="ChangePassFormNew1" class="form-control m-4_5 w-85 Pass" placeholder="Nueva contraseña"> 
+                <input type="password" name="password" id="ChangePassFormNew1" tabindex="0" data-toggle="popover1"  title="Formato Invalido"  data-content="La contraseña debe contener una Mayuscula, minusculas y un numero" class="form-control m-4_5 w-85 Pass" placeholder="Nueva contraseña"> 
             </div>
         </div>
 
@@ -101,12 +102,12 @@
                 <i class="fas fa-check-circle d-none FormValid" data-toggle="tooltip" data-placement="up" title="contraseña Valida" id="FormPassNew2Valid"></i>
                 <i class="fas fa-times-circle d-none FormInvalid" data-toggle="tooltip" data-placement="up" title="contraseña Invalida" id="FormPassNew2InValid"></i>
                 <a class="fas fa-eye grey-text mr-4 ShowPass" id="ShowNew1Pass"></a> 
-                <input type="password" name="password" id="ChangePassFormNew2" class="form-control m-4_5 w-85 Pass"  placeholder="Repetir Nueva"> 
+                <input type="password" name="password" id="ChangePassFormNew2" tabindex="0" data-toggle="popover2" data-trigger="focus"  title="Formato Invalido"  data-content="La contraseña debe contener una Mayuscula, minusculas y un numero" class="form-control m-4_5 w-85 Pass"  placeholder="Repetir Nueva"> 
             </div>
         </div>
         
       <div class="modal-footer d-flex justify-content-center">
-        <button class="btn btn-success"><i class="fas fa-check-circle mr-3"></i>Aceptar</button>
+        <button class="btn btn-success" id="btnAceptar"><i class="fas fa-check-circle mr-3"></i>Aceptar</button>
       </div>
       </div>
     </div>
