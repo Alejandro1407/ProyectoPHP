@@ -93,7 +93,7 @@ create table transacciones(
     fecha datetime,
     tipoTransaccion int,
     foreign key (tipoTransaccion) references tipoTransaccion(id),
-    foreign key (idCuenta) references cuenta(id),
+    foreign key (idCuenta) references Cuenta(id),
     foreign key (modalidad) references modalidad(id)
 );
 
