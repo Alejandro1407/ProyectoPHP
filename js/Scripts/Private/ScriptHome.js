@@ -1,6 +1,7 @@
 var actual = $('#Dash');
+var actualxs = $('#Dash');
 $(document).ready(function(){
-    $('#Body').load("/ProyectoPHP/private/perfil.php");
+    $('#Body').load("/ProyectoPHP/private/dashboard.php");
     
     $('.option-menu').on('click',function(e){
         actual[0].className = "list-group-item list-group-item-action waves-effect option-menu";
@@ -8,6 +9,14 @@ $(document).ready(function(){
         actual[0].className = "list-group-item active waves-effect option-menu";
         e.preventDefault();
         MostrarPage($(this).attr('id'));
+    });
+
+    $('.option-menu-xs').on('click',function(e) {
+       actualxs[0].parentNode.classList.remove("active");
+       actualxs[0] = e.target;
+       actualxs[0].parentNode.classList.add("active");
+       e.preventDefault();
+       MostrarPage($(this).attr('id'));
     });
     
 });

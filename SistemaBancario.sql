@@ -1,4 +1,4 @@
-CREATE DATABASE SistemaBancario1;
+CREATE DATABASE SistemaBancario;
 
 USE SistemaBancario1;
 
