@@ -1,4 +1,5 @@
 var actual = $('#Dash');
+var actualxs = $('#Dash');
 $(document).ready(function(){
     console.log("Work");
 
@@ -11,6 +12,13 @@ $(document).ready(function(){
         e.preventDefault();
         MostrarPage($(this).attr('id'))
     });
+    $('.option-menu-xs').on('click',function(e) {
+        actualxs[0].parentNode.classList.remove("active");
+        actualxs[0] = e.target;
+        actualxs[0].parentNode.classList.add("active");
+        e.preventDefault();
+        MostrarPage($(this).attr('id'));
+     });
     
 });
 

@@ -82,7 +82,7 @@
                                 <a class=\"nav-link waves-effect option-menu-xs\" id=\"History\"href=\"#\"><i class=\"fas fa-history mr-3\"></i>Historial</a>
                             </li>
                             <li class=\"nav-item\">
-                                <a class=\"nav-link waves-effect option-menu-xs\ id=\"Account\" href=\"#\"><i class=\"fas fa-user mr-3\"></i>Perfil</a>
+                                <a class=\"nav-link waves-effect option-menu-xs\" id=\"Account\" href=\"#\"><i class=\"fas fa-user mr-3\"></i>Perfil</a>
                             </li>
                         </ul>
                         <ul class=\"navbar-nav nav-flex-icons\">
@@ -141,30 +141,30 @@
                         <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
                         <ul class=\"navbar-nav mr-auto\">
                             <li class=\"nav-item active\">
-                                <a class=\"nav-link waves-effect\"  href=\"#\"><i class=\"fas fa-chart-pie mr-3\"></i>DashBoard</a>
+                                <a class=\"nav-link waves-effect option-menu-xs\" id=\"Dash\"  href=\"#\"><i class=\"fas fa-chart-pie mr-3\"></i>DashBoard</a>
                             </li>
                             <li class=\"nav-item\">
-                                <a class=\"nav-link waves-effect\" href=\"#\"><i class=\"fas fa-piggy-bank mr-3\"></i>Depositos</a>
+                                <a class=\"nav-link waves-effect option-menu-xs\" id=\"Deposito\" href=\"#\"><i class=\"fas fa-piggy-bank mr-3\"></i>Depositos</a>
                             </li>
                             <li class=\"nav-item\">
-                                <a class=\"nav-link waves-effect\" href=\"#\"><i class=\"fas fa-hand-holding-usd mr-3\"></i>Retiros</a>
+                                <a class=\"nav-link waves-effect option-menu-xs\" id=\"Retiros\" href=\"#\"><i class=\"fas fa-hand-holding-usd mr-3\"></i>Retiros</a>
                             </li>
                             <li class=\"nav-item\">
-                                <a class=\"nav-link waves-effect\" href=\"#\"><i class=\"fas fa-money-bill-alt mr-3\"></i>Saldo</a>
+                                <a class=\"nav-link waves-effect option-menu-xs\" id=\"Saldo\" href=\"#\"><i class=\"fas fa-money-bill-alt mr-3\"></i>Saldo</a>
                             </li>
                             <li class=\"nav-item\">
-                                <a class=\"nav-link waves-effect\" href=\"#\"><i class=\"fas fa-history mr-3\"></i>Historial</a>
+                                <a class=\"nav-link waves-effect option-menu-xs\" id=\"History\" href=\"#\"><i class=\"fas fa-history mr-3\"></i>Historial</a>
                             </li>
                             <li class=\"nav-item\">
-                                <a class=\"nav-link waves-effect\" href=\"#\"><i class=\"fas fa-user mr-3\"></i>Perfil</a>
+                                <a class=\"nav-link waves-effect option-menu-xs\" id=\"Account\" href=\"#\"><i class=\"fas fa-user mr-3\"></i>Perfil</a>
                             </li>
                             <li class=\"nav-item\">
-                                <a class=\"nav-link waves-effect\" href=\"#\"><i class=\"fas fa-clipboard-list mr-3\"></i>Otros</a>
+                                <a class=\"nav-link waves-effect option-menu-xs\"  id=\"Varios\" href=\"#\"><i class=\"fas fa-clipboard-list mr-3\"></i>Otros</a>
                             </li>
                         </ul>
                         <ul class=\"navbar-nav nav-flex-icons\">
                             <li class=\"nav-item\">
-                            <a href=\"/ProyectoPHP/lib/cerrarsesion.php\" class=\"nav-link btn btn-danger white-text rounded waves-effect\"><i class=\"fas fa-sign-out-alt mr-2\"></i>Cerrar Sesion</a>
+                            <a  data-toggle=\"modal\" data-target=\"#modalConfirmSesion\" class=\"nav-link btn btn-danger white-text rounded waves-effect\"><i class=\"fas fa-sign-out-alt mr-2\"></i>Cerrar Sesion</a>
                             </li>
                         </ul>
                         </div>
