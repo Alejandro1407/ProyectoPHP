@@ -6,7 +6,7 @@
     base::Scripts("Public/ScriptIndex"); // Incluye los JS Necesarios
     if(isset($_GET['error'])): ?>
         <script>
-            toastr.error('Debe authenticarse primero','¡Error!',{
+            toastr.error('<?php echo $_GET['error'] ?>','¡Error!',{
                 "progressBar":true,
                 "closeButton": true
             });

@@ -32,7 +32,7 @@ class conexion{
             $gsent->execute(array_values($params));
             return $gsent->fetchAll();  
         }catch(Exception $e){
-            print("¡Error!" .$e->getMessage());
+            print("¡Error!" . $e->getMessage());
             die();
         }
     }

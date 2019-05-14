@@ -30,7 +30,7 @@ CREATE TABLE Usuario(
 INSERT INTO Usuario VALUES ( null,'administrador','administrador','administrador@gmail.com','Apopas','1234-5678',SHA2('Password01',256),19,'M','12345678-9',1,'123456789012345');
 
 --Cliente por defecto
-INSERT INTO Usuario VALUES ( null,'Victor Alejandro','Alejo Gálvez','alejandroalejo714@gmail.com','Apopitha','1234-6789',SHA2('Password01',256),19,'M','21345678-9',1,'123456789012357');
+INSERT INTO Usuario VALUES ( null,'Victor Alejandro','Alejo Gálvez','alejandroalejo714@gmail.com','Apopitha','1234-6789',SHA2('Password01',256),19,'M','21345678-9',2,'123456789012357');
 
 /* Define el funcionamiento de las cuentas */
 

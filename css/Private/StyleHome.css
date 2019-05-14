@@ -19,7 +19,7 @@
       .sidebar-fixed .logo-wrapper img {
         max-height: 50px; }
   
-  @media (min-width: 1200px) {
+  @media (min-width: 768px) {
     .navbar,
     .page-footer,
     main {

@@ -3,13 +3,22 @@
     include_once(Raiz."/ProyectoPHP/lib/page.php");
     base::Head("Servicios","Public/StyleServicios"); //Incluye la cabecera e importa los css
     base::Header("bg-white","grey-text"); // Muestra el Header del sitio
-?>
+    base::Scripts("Public/ScriptIndex"); // Incluye los JS Necesarios
+    if(isset($_GET['error'])): ?>
+        <script>
+            toastr.error('<?php echo $_GET['error'] ?>','¡Error!',{
+                "progressBar":true,
+                "closeButton": true
+            });
+        </script>
+<?php endif;?>
+
 <body class="mt-5">
-    
     <?php base::ModalLogin(); ?>
     <!-- Inicio del contendio del sitio WEB -->
+
     <div id="theDiv">
-        <h1 class="white-text text-align-center font-weight-bold" id="Titulo">Servicios</h1>
+        <h1 class="white-text text-align-center font-weight-bold mt-5" id="Titulo">Servicios</h1>
     </div>
     <div class="bg-white panel pt-5 row">
         <div class="col-6">
@@ -47,8 +56,7 @@
     </div>
     <!-- Fin del contenido del sitio WEB -->
 <?php
-   base::Scripts("");
-   base::Footer(); // Incluye el Footer ademas de los JS
+   base::Footer(); // Incluye el Footer
 ?>
 </body>
 </html>

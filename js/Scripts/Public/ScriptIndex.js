@@ -7,6 +7,8 @@ new WOW().init();
 var Valid_Email = 0;
 var Valid_Pass = 0;
 $(document).ready(function(){
+    CheckEmail($('#LogInFormEmail').val(),0);
+    CheckPassword($('#LogInFormPassword').val(),0);
     $('#LogInFormEmail').on('keyup',function(e){
         CheckEmail(e.target.value,0);
     });

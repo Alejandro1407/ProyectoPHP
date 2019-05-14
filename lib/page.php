@@ -118,7 +118,7 @@
                         <a href=\"#\" class=\"list-group-item list-group-item-action waves-effect option-menu\" id=\"Account\">
                             <i class=\"fas fa-user mr-3\"></i>Perfil
                         </a>
-                        <a href=\"/ProyectoPHP/lib/cerrarsesion.php\" class=\"list-group-item list-group-item-action waves-effect\">
+                        <a  data-toggle=\"modal\" data-target=\"#modalConfirmSesion\" class=\"list-group-item list-group-item-action waves-effect\">
                             <i class=\"fas fa-sign-out-alt mr-2\"></i>Cerrar Sesion
                         </a>
                         </div>
@@ -204,7 +204,7 @@
                         <a href=\"#\" class=\"list-group-item list-group-item-action waves-effect option-menu\" id=\"Varios\">
                             <i class=\"fas fa-clipboard-list mr-3\"></i>Otros
                         </a>
-                        <a href=\"/ProyectoPHP/lib/cerrarsesion.php\" class=\"list-group-item list-group-item-action waves-effect\">
+                        <a data-toggle=\"modal\" data-target=\"#modalConfirmSesion\" class=\"list-group-item list-group-item-action waves-effect\">
                             <i class=\"fas fa-sign-out-alt mr-2\"></i>Cerrar Sesion
                         </a>
                         </div>
@@ -253,6 +253,29 @@
                 </div>
             </div>
             <!-- Fin del inicio de sesion-->");
+        }
+
+        public static function ModalCerrarSesion(){
+            print("
+                <div class=\"modal fade position-absolute\" id=\"modalConfirmSesion\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+                    <div class=\"modal-dialog modal-notify modal-danger\" role=\"document\">
+                    <div class=\"modal-content text-center\">
+                        <!--Header-->
+                        <div class=\"modal-header d-flex justify-content-center\">
+                        <p class=\"heading\">Cerrar Sesion</p>
+                        </div>
+                        <div class=\"modal-body\">
+                        <i class=\"fas fa-info-circle fa-4x animated rotateIn mb-4\"></i>
+                        <p>¿Seguro que desea cerrar la sesion Actual?</p>
+                        </div>
+                        <div class=\"modal-footer flex-center\">
+                        <a href=\"/ProyectoPHP/lib/cerrarsesion.php\" class=\"btn btn-success\">Sí</a>
+                        <a class=\"btn btn-danger\" data-dismiss=\"modal\">No</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            ");
         }
 
         public static function Footer(){

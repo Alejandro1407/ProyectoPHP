@@ -18,7 +18,7 @@
 
     <!-- Sidebar -->
     <?php
-        base::SideAdminBar("Alejandro Alejo","alejandroalejo714@gmail.com");
+        base::SideAdminBar($_COOKIE['Nombre'],$_COOKIE['Email']);
     ?>
     <!-- Sidebar -->
 
@@ -31,6 +31,7 @@
   </main>
 
 <?php
+   base::ModalCerrarSesion();
    base::Scripts("Restricted/ScriptIndex","Restricted/ScriptHome"); // Incluye los JS
 ?>
 </body>
