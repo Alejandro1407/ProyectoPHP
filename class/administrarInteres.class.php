@@ -11,7 +11,7 @@ require_once(Raiz.'/ProyectoPHP/lib/conexion.php');
 		public function mostrar(){
 			$db=new Conexion();
 			$listamyInteres = [];
-			$select=$db->ExecuteQuery('CALL ver_interes');
+			$select= $db->ExecuteQuery('CALL ver_interes');
  
 			foreach($select as $interes){
 				$myInteres= new interes();

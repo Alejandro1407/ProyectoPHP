@@ -66,6 +66,16 @@ CREATE TABLE Cuenta(
 Alter table Cuenta
 add constraint unique (NCuenta);
 
+DELIMITER //
+    CREATE TRIGGER Cuenta_Insert BEFORE INSERT ON Cuenta
+        FOR EACH ROW
+            BEGIN
+                DECLARE v_valor int default 0;
+                SET v_valor = (SELECT COUNT(Id)+1 FROM Cuenta);
+                SET NEW.NCuenta = CONCAT('C000 0000 00',LPAD(v_valor, 10, '0'));
+        END//
+DELIMITER ;
+
 /*Cuenta del Administrador*/
 INSERT INTO Cuenta VALUES (NULL,'CP00 0000 00 0000000001',1,1,100);
 

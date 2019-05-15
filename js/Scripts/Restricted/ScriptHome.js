@@ -1,7 +1,7 @@
 var actual = $('.sidebar-fixed').find('#Dash');
 var actualxs = $('.navbar').find('#Dash');
 $(document).ready(function(){
-    $('#Body').load("/ProyectoPHP/restricted/AñadirCuentaEmpresarial.php");
+    $('#Body').load("/ProyectoPHP/restricted/AñadirCuentaPersonal.php");
     $('.option-menu').on('click',function(e){
         console.log(actual);
         actual[0].className = "list-group-item list-group-item-action waves-effect option-menu";
@@ -37,7 +37,7 @@ function MostrarPage(id){
         case 'AddUser':
             $('#Body').load("/ProyectoPHP/restricted/adduser.php");
             break;
-        case 'Consult':
+        case 'Saldo':
             $('#Body').load("/ProyectoPHP/restricted/consult.php");
             break;
         case 'History':

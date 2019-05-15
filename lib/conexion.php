@@ -10,7 +10,9 @@ class conexion{
         $contra="";
 
         try{
-            @$this->conn = new PDO("mysql:host=$host;dbname=$dbname",$usuario,$contra);
+            $this->conn = new PDO("mysql:host=$host;dbname=$dbname",$usuario,$contra);
+            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //Muestra Exepciones
+            $this->conn->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
         }catch(Exception $e){
             print ("¡Error!" . $e->getMessage());
             die();
@@ -19,7 +21,7 @@ class conexion{
 
     function Reconnect(){
         try{
-            @$this->conn = new PDO("mysql:host=$host;dbname=$dbname",$usuario,$contra);
+            $this->conn = new PDO("mysql:host=$host;dbname=$dbname",$usuario,$contra);
         }catch(Exception $e){
             print ("¡Error!" . $e->getMessage());
             die();
@@ -32,7 +34,7 @@ class conexion{
             $gsent->execute(array_values($params));
             return $gsent->fetchAll();  
         }catch(Exception $e){
-            print("¡Error!" . $e->getMessage());
+            return "¡Error!" . $e->getMessage();
             die();
         }
     }
@@ -40,9 +42,9 @@ class conexion{
     function ExecuteUpdate($Query,$params = []){
         try{
             $gsent = $this->conn->prepare($Query);
-            return $gsent->execute($params);
+            return $gsent->execute(array_values($params));
         }catch(Exception $e){
-            print("¡Error!" .$e->getMessage());
+            return "¡Error! " . $e->getMessage();
             die();
         }
     }

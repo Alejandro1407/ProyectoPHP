@@ -21,7 +21,7 @@
     <!-- Sidebar -->
 
     <main class="pt-5 mx-lg-5">
-    <div class="container-fluid mt-3" id="Body">
+    <div class="container-fluid mt-1" id="Body">
        <!--WorkArea-->
         <!-- Tu Programacion Toxica Aqui -->
       <!--/WorkArea-->

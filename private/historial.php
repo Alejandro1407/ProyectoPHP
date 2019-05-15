@@ -10,7 +10,7 @@
 <table class="table table-striped table-bordered" id="HistorialTable">
     <thead>
         <tr>
-            <th>#Fecha de transaccion</th>
+            <th>Fsecha de transaccion</th>
             <th>Modalidad</th>
             <th>Tipo de transaccion</th>
             <th>Monto de la transaccion</th>
