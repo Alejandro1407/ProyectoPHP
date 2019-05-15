@@ -91,8 +91,8 @@ insert into tipoTransaccion values (null,'Deposito'),(null,'Retiro'),(null,'Cons
 create table transacciones(
     id int auto_increment primary key,
     idCuenta int not null,
-    monto float not null,
-    modalidad int not null,
+    monto float,
+    modalidad int,
     fecha datetime,
     tipoTransaccion int,
     foreign key (tipoTransaccion) references tipoTransaccion(id),

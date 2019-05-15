@@ -1,7 +1,7 @@
 var actual = $('.sidebar-fixed').find('#Dash');
 var actualxs = $('.navbar').find('#Dash');
 $(document).ready(function(){
-    $('#Body').load("/ProyectoPHP/restricted/dashboard.php");
+    $('#Body').load("/ProyectoPHP/restricted/AñadirCuentaEmpresarial.php");
     $('.option-menu').on('click',function(e){
         console.log(actual);
         actual[0].className = "list-group-item list-group-item-action waves-effect option-menu";

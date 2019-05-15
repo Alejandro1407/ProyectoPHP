@@ -167,7 +167,7 @@
                         </ul>
                         <ul class=\"navbar-nav nav-flex-icons\">
                             <li class=\"nav-item\">
-                            <a  data-toggle=\"modal\" data-target=\"#modalConfirmSesion\" class=\"nav-link btn btn-danger white-text rounded waves-effect\"><i class=\"fas fa-sign-out-alt mr-2\"></i>Cerrar Sesion</a>
+                            <a data-toggle=\"modal\" data-target=\"#modalConfirmSesion\" class=\"nav-link btn btn-danger white-text rounded waves-effect\"><i class=\"fas fa-sign-out-alt mr-2\"></i>Cerrar Sesion</a>
                             </li>
                         </ul>
                         </div>
@@ -264,7 +264,7 @@
         public static function ModalCerrarSesion(){
             print("
                 <div class=\"modal fade position-absolute\" id=\"modalConfirmSesion\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
-                    <div class=\"modal-dialog modal-notify modal-danger\" role=\"document\">
+                    <div class=\"modal-dialog modal-notify modal-dialog-centered modal-danger\" role=\"document\">
                     <div class=\"modal-content text-center\">
                         <!--Header-->
                         <div class=\"modal-header d-flex justify-content-center\">

@@ -87,6 +87,9 @@ body::-webkit-scrollbar-thumb
     padding-right: 15%;
     min-height: 350px;
 }
+.fa-0-5x{
+    font-size:0.5em;
+}
 
 @media (min-width: 256px) and (max-width: 576px){
     #TheContainer{
