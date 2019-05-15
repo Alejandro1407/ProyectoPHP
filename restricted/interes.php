@@ -24,7 +24,7 @@ EO;
         echo "<tr><td style='width:29%'>".$interes->getidTipoTransaccion()."</td>";
         echo "<td style='width:29%'>".$interes->getinteres()."</td>";
         echo "<td style='width:29%'>".$interes->getnGratuitas()."</td>";
-        echo "<td style='width:13%'><a class='btn btn-info' href='#'>Modificar</a></td>";
+        echo "<td style='width:13%'><a class='btn btn-info btn-modificar' id='". $interes->getidTipoTransaccion() ."'>Modificar</a></td>";
         echo "</tr>";
     }
     echo "</tbody/></table>";
@@ -35,5 +35,9 @@ EO;
         $('#tablaInteres').DataTable({
             responsive: true
         });
+    });
+    $('.btn-modificar').on('click',function(e){
+        e.preventDefault();
+        $('#Body').load('/ProyectoPHP/restricted/modificarInteres.php', { id: e.target.id });
     });
 </script>

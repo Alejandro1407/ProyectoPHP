@@ -3,8 +3,7 @@
     include_once(Raiz."/ProyectoPHP/lib/conexion.php");
     $id = $_COOKIE['Id'];
     $conn = new conexion;
-   $rs = $conn->ExecuteQuery("SELECT c.monto,m.modalidad,c.fecha,tt.tipoTransaccion FROM transacciones c INNER JOIN cuenta u ON c.idCuenta = u.IdUsuario INNER JOIN tipotransaccion tt ON c.tipoTransaccion = tt.id INNER JOIN modalidad m ON c.modalidad = m.id WHERE u.IdUsuario = $id ");
-
+    $rs = $conn->ExecuteQuery("SELECT c.monto,m.modalidad,c.fecha,tt.tipoTransaccion FROM transacciones c INNER JOIN Cuenta u ON c.idCuenta = u.IdUsuario INNER JOIN tipoTransaccion tt ON c.tipoTransaccion = tt.id INNER JOIN modalidad m ON c.modalidad = m.id WHERE u.IdUsuario = ? ",array($id));
 ?>
 
 <table class="table table-striped table-bordered" id="HistorialTable">

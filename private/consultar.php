@@ -3,7 +3,7 @@
     include_once(Raiz."/ProyectoPHP/lib/conexion.php");
     $conn = new conexion;
     $id = $_COOKIE['Id'];
-   $rs = $conn->ExecuteQuery("SELECT c.Saldo, c.NCuenta FROM cuenta c WHERE IdUsuario = $id");
+   $rs = $conn->ExecuteQuery("SELECT c.Saldo, c.NCuenta FROM Cuenta c WHERE IdUsuario = ?",array($id));
 
 ?>
 

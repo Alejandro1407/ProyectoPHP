@@ -41,17 +41,18 @@ CREATE TABLE TipoCuenta(
     TipoCuenta VARCHAR(50) NOT NULL UNIQUE
 );
 
+INSERT INTO TipoCuenta VALUES (NULL,'Personal');
+INSERT INTO TipoCuenta VALUES (NULL,'Empresarial');
+
 CREATE TABLE Empresa(
     Id INT AUTO_INCREMENT PRIMARY KEY,
     Nombre VARCHAR(50) NOT NULL,
     Domicilio VARCHAR(50),
     Telefono CHAR(9) NOT NULL UNIQUE,
+    Descripcion VARCHAR(500) NULL,
     IdRepresentante INT,
     FOREIGN KEY (IdRepresentante) REFERENCES Usuario(Id)
 );
-
-INSERT INTO TipoCuenta VALUES (NULL,'Personal');
-INSERT INTO TipoCuenta VALUES (NULL,'Empresarial');
 
 CREATE TABLE Cuenta(
 	Id INT AUTO_INCREMENT PRIMARY KEY,
@@ -119,3 +120,85 @@ create table interes (
 
 alter table interes
 add nGratuitas int not null;
+
+insert into interes VALUES (1,7.5,15),(2,5,10),(3,3,15);
+
+delimiter //
+create procedure ver_interes()
+BEGIN
+    select i.idTipoTransaccion as 'id', t.tipoTransaccion as 'transaccion',
+    i.interes as 'interes', i.nGratuitas as 'gratuitas' FROM
+    interes as i join tipoTransaccion as t on t.id = i.idTipoTransaccion;
+END//
+delimiter ;
+
+delimiter //
+create procedure buscar_interes(
+	in v_id int
+)
+BEGIN
+    select i.idTipoTransaccion as 'id', t.tipoTransaccion as 'transaccion',
+    i.interes as 'interes', i.nGratuitas as 'gratuitas' FROM
+    interes as i join tipoTransaccion as t on t.id = i.idTipoTransaccion where i.idTipoTransaccion = v_id limit 1;
+END//
+delimiter ;
+
+delimiter //
+create trigger actualizarSaldo after insert on transacciones
+for each row
+begin
+	set @monto = new.monto;
+    set @saldo = (select Saldo from cuenta where id = new.idCuenta);
+    set @nTransa = (select count(*) from transacciones where idCuenta = new.idCuenta and tipotransaccion = new.tipoTransaccion and month(fecha) = month(now()) and year(fecha) = year(now()));
+    set @nTransaG = (select nGratuitas from interes where idTipoTransaccion = new.tipoTransaccion);
+    set @interes = (select interes from interes where idTipoTransaccion = new.tipoTransaccion);
+    set @interesC = @interes / 100;
+    set @interesD = @monto * @interesC;
+    /*Deposito*/
+    if(new.tipoTransaccion = 1) then
+		begin
+			if(@nTransa > @nTransaG) then
+				begin
+					set @mSaldo = @saldo + @monto;
+					set @nSaldo = @mSaldo - @interesD;
+					update cuenta set Saldo = @nSaldo where id = new.idCuenta;
+                end;
+			else
+				begin
+					set @nSaldo = @saldo + @monto;
+					update cuenta set Saldo = @nSaldo where id = new.idCuenta;
+                end;
+			end if;
+		end;
+        
+	/*Retiro*/
+	else if (new.tipoTransaccion = 2) then
+		begin
+			if(@nTransa > @nTransaG) then
+				begin
+					set @mSaldo = @saldo - @monto;
+					set @nSaldo = @mSaldo - @interesD;
+					update cuenta set Saldo = @nSaldo where id = new.idCuenta;
+                end;
+			else
+				begin
+					set @nSaldo = @saldo - @monto;
+					update cuenta set Saldo = @nSaldo where id = new.idCuenta;
+                end;
+			end if;
+		end;
+	
+    /*Consulta*/
+	else
+		begin
+			if(@nTransa > @nTransaG) then
+				begin
+					set @nSaldo = @saldo - @interesD;
+					update cuenta set Saldo = @nSaldo where id = new.idCuenta;
+                end;
+			end if;
+		end;
+	end if;
+    end if;
+end//
+delimiter ;
