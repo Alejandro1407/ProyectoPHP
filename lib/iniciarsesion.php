@@ -3,23 +3,25 @@
     include_once("conexion.php");
     session_start();
 
-    $email = $_POST['email'];
-    $pass = $_POST['password'];
+    $email =$_POST['email'];
+    $pass =$_POST['password'];
 
     $conn = new conexion();
-    $query ="SELECT Id,Nombre,Email,TipoUsuario FROM Usuario WHERE Email = '$email' AND Pass = SHA2('$pass',256)";
+    $query ="SELECT Id,Nombre,Email,TipoUsuario FROM Usuario WHERE Email = ? AND Pass = SHA2(?,256)";
 
     $params = array($email,$pass);
     
     $rs = $conn->executeQuery($query,$params);
-    $x = $rs[0];
-
-    if($x == null){
+    if(!isset($rs[0])){
         header("location: /ProyectoPHP/public/index.php?error=Usuario y/o Contraseña incorrecto");
     }
+
+    $x = $rs[0];
+
     setcookie("Id",$x["Id"],time()+1*24*60*60,'/'); //Define una cookie
     setcookie("Nombre",$x["Nombre"],time()+1*24*60*60,'/'); // :v
     setcookie("Email",$x["Email"],time()+1*24*60*60,'/'); //Define otra cookie :v
+  
     switch($x["TipoUsuario"]){
         case 1:
             $_SESSION['Administrador'] = $x["Nombre"];
